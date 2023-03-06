@@ -1,0 +1,15 @@
+Pseudocode for Read function: isItemInStock
+By Will, 3/6/23
+
+
+// this is the item ID to check if it's in stock
+define input parameter param_item_id type: int
+
+// output variable w/ placeholder value
+int $result = 0;
+
+Store result of below query into $result:
+run MySQL: SELECT Quantity > 0 FROM inventory_items WHERE item_id = param_item_id;
+
+return $result;
+
