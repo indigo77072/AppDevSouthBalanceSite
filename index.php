@@ -36,7 +36,7 @@ if ($result->num_rows > 0) {
 }
 
 //Saving - Inserting data into the database
-$sql2 = "INSERT INTO accounts (Username, Password, First_Name, Last_Name)
+/*$sql2 = "INSERT INTO accounts (Username, Password, First_Name, Last_Name)
 VALUES ('BBilly2', 'ItsASecret','Bob', 'Billy)";
 
 if ($conn->query($sql2) === TRUE) {
