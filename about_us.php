@@ -14,15 +14,8 @@
         <title>South Balance - About Us</title>
     </head>
     <body>
-        <header id="topHeader">
-            <div id="leftSection">
-                <p id="logoImgPlaceholder">Logo</p>
-            </div><div id="centerSection">
-                <h1 id="siteTitle">South Balance Online Store </h1>
-            </div><div id="rightSection">
-                <p id="navigation">Home - Cart - Logout</p>
-            </div>
-        </header>
+
+        <?php include 'header.php' ?>
 
         <p id="missionStatement">Our Mission: At South Balance, Inc., we never stop innovating.<br>
             It takes hundreds of passionate, dedicated, and talented<br>
