@@ -29,7 +29,10 @@ header#topHeader > div#leftSection {
 
     display: inline-block; /* pertinent to child of parent container */
 
-    background-color: lime;
+    /* background-color: lime; */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
 }
 
 header#topHeader > div#centerSection {
@@ -40,7 +43,8 @@ header#topHeader > div#centerSection {
 
     display: inline-block; /* pertinent to child of parent container */
 
-    background-color: cyan;
+    /* background-color: cyan; */
+    margin-bottom: 0px;
 
 }
 
@@ -52,20 +56,33 @@ header#topHeader > div#rightSection {
 
     display: inline-block; /* pertinent to child of parent container */
 
-    background-color: red;
+    /* background-color: red; */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
 }
 
 p#logoImgPlaceholder {
     text-align: left;
     padding-left: 70px;
+    margin-bottom: 0px;
 }
 
-h2#siteTitle {
+h1#siteTitle {
     text-align: center;
+    margin-bottom: 0px;
 }
 
 p#navigation {
     text-align: right;
     padding-right: 50px;
+    margin-bottom: 0px;
 }
 
+/* Other Body Styles */
+
+p#missionStatement {
+    margin-top: 110px;
+    text-align: center;
+    
+}
