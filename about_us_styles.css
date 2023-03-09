@@ -1,81 +1,12 @@
 @charset "utf-8";
 
 /*
-    CSS Styles for about_us.html
+    CSS Styles for about_us.php
     Author: Will
     Filename: about_us_styles.css
 */
 
-/* Header Styles */
-/* CSS adapted from https://www.designcise.com/web/tutorial/how-to-force-html-elements-to-stay-on-the-same-line */
 
-header#topHeader {
-    width: 100%;
-    text-align: left;
-    /* auto height (?) b/c I'm not specifying it */
-    white-space: nowrap;
-    overflow-x: auto;
-
-    margin: 0px;
-}
-
-header#topHeader > div#leftSection {
-    width: 30%;
-    text-align: left;
-    white-space: nowrap;
-    overflow-x: auto;
-
-    display: inline-block; /* pertinent to child of parent container */
-
-    /* background-color: lime; */
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-bottom: 20px;
-}
-
-header#topHeader > div#centerSection {
-    width: 40%;
-    text-align: center;
-    white-space: nowrap;
-    overflow-x: auto;
-
-    display: inline-block; /* pertinent to child of parent container */
-
-    /* background-color: cyan; */
-    margin-bottom: 0px;
-
-}
-
-header#topHeader > div#rightSection {
-    width: 30%;
-    text-align: right;
-    white-space: nowrap;
-    overflow-x: auto;
-
-    display: inline-block; /* pertinent to child of parent container */
-
-    /* background-color: red; */
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-bottom: 20px;
-}
-
-p#logoImgPlaceholder {
-    text-align: left;
-    padding-left: 70px;
-    margin-bottom: 0px;
-}
-
-h1#siteTitle {
-    text-align: center;
-    margin-bottom: 0px;
-}
-
-p#navigation {
-    text-align: right;
-    padding-right: 50px;
-    margin-bottom: 0px;
-}
 
 /* Other Body Styles */
 

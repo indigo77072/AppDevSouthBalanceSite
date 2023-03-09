@@ -1,15 +1,14 @@
 <!--
     SB About Us page
     Author: Will
-    Filename: about_us.html
-
-    Will has worked with only HTML/CSS, PHP will be added soon.
+    Filename: about_us.php
 -->
 
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8"></meta>
+        <link rel="stylesheet" href="header_styles.css">
         <link rel="stylesheet" href="about_us_styles.css">
         <title>South Balance - About Us</title>
     </head>
