@@ -1,0 +1,17 @@
+Pseudocode for Read function: getItemName
+
+***To be used in the Item Information Page backend***
+
+By Will, 3/9/23
+
+
+// this is the item ID to get the name for
+define input parameter param_item_id type: int
+
+// output variable w/ placeholder value
+string $result = null;
+
+Store result of below query into $result:
+run MySQL: SELECT Item_Name FROM inventory_items WHERE item_id = param_item_id;
+
+return $result;
