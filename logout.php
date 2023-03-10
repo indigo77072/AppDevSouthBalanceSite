@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="header_styles.css">
         <link rel="stylesheet" href="logout_styles.css">
         <title>South Balance - Logout</title>
+        <!-- Will's guess: an external logout script (PHP) will run when this webpage is loaded. -->
+        
     </head>
     <body>
 
