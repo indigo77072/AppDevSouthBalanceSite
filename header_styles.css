@@ -28,9 +28,9 @@ header#topHeader > div#leftSection {
     display: inline-block; /* pertinent to child of parent container */
 
     /* background-color: lime; */
-    margin-top: 0px;
+    margin-top: -20px;
     margin-bottom: 0px;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
 }
 
 header#topHeader > div#centerSection {
@@ -42,7 +42,7 @@ header#topHeader > div#centerSection {
     display: inline-block; /* pertinent to child of parent container */
 
     /* background-color: cyan; */
-    margin-bottom: 0px;
+    margin-bottom: 35px;
 
 }
 
@@ -55,24 +55,36 @@ header#topHeader > div#rightSection {
     display: inline-block; /* pertinent to child of parent container */
 
     /* background-color: red; */
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-bottom: 20px;
+    /* margin-top: 0px;
+    margin-bottom: 0px; */
+
+    margin-top: -20px;
+    margin-bottom: 60px;
+
+    /* padding-bottom: 20px; */
 }
 
-p#logoImgPlaceholder {
+img#logoImg {
+    /* width: 105px; */
+    /* height: 74px; */
+
     text-align: left;
-    padding-left: 70px;
+    padding-left: 40px;
     margin-bottom: 0px;
+
+    padding-bottom: 0px;
+    padding-top: 30px;
 }
 
 h1#siteTitle {
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
     margin-bottom: 0px;
+    /* font-weight: bold; */
 }
 
 p#navigation {
     text-align: right;
-    padding-right: 50px;
+    padding-right: 40px;
     margin-bottom: 0px;
 }
