@@ -7,10 +7,10 @@
 <?php
 echo "Hello World!";
 
-$servername = "localhost";
+$servername = "vdi-sopadb-p40";
 $username = "student";
 $password = "SoPAStudentDB!#!";
-//$database = "south_balance_database";
+// $database = "south_balance_database";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
