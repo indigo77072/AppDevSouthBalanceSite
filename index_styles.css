@@ -15,3 +15,13 @@ input#search {
     width: 320px;
 }
 
+div#bodyText {
+    margin: 40px auto auto auto;
+    width: 40%;
+}
+
+p {
+    margin: auto;
+    text-align: left;
+}
+

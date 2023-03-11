@@ -23,8 +23,17 @@ $conn = new mysqli($servername, $username, $password);
 ?>
 
   <div id="searchBar">
-    <input type="text" id="search">
+    <input type="text" id="search" placeholder="Search">
 </div>
+<div id="bodyText"><p>Radically Conscious. Obsessively Chill. Fanatically Zen.</p><br>
+<p class="bodyContent">Here at South Balance, we do “slowing down” differently. What started as a New Orleans-based mom-and-pop
+  retail operation has bloomed into one of the most popular and innovative suppliers of premium yoga mats
+  and merchandise in the United States and across the world. Recently named this year’s fastest growing company
+  by CIO magazine, we’re working hard to bring you the products and experience you expect and deserve. So go ahead; 
+  browse our site, explore our products, and picture yourself #fanaticallyzen.</p>
+</div>
+
+
 
 <!--
 // // Check connection
