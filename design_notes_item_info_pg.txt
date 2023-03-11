@@ -1,0 +1,41 @@
+ Item Information Page backend design notes
+
+various notes
+ - store item_id for this page in a php variable
+ - 
+
+designer choices
+ 1. store price for this item in DB -- DB needs modification
+2. store price for this item in the webpage
+
+1. store product image file path and name in DB - the database would need modification
+2. store that in the webpage
+
+
+top of page -to- bottom of page outline of pseudocode:
+
+include header.PHP
+
+
+if isItemInStock
+
+	define a div "manual" layout
+	-or-
+	define a table layout
+	-or-
+	define a grid layout
+	-or-
+	define a flexbox layout
+	
+	display:
+	 - picture
+	 - getItemName
+	 - item price
+	 - skip reviews probably
+	 - select military branch etc.
+	 - " spinner" w/ quantity up to getQuantityInStock
+else:
+	echo getItemName is not in stock
+
+
+
