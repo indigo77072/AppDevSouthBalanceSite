@@ -31,3 +31,17 @@
 
 </html>
 
+<?php
+//indigo's reccomendation for the php code running correctly
+   /*         if(!isset($_SESSION['user'])){
+                header("Location: login.php"); // We will put this code at the top of every page but the login page. Makes sure that someone is logged in before being able to access any other pages.
+            }
+     if (isset($_SESSION['user'])) //sees if a user is logged in. 
+     {
+         destroySession(); //if the user is looged in the destroy the session so that nobody is loggef in. 
+         echo "<p id=\"logoutMsg\">You have successfully logged out.</p>"; // I will have to research how to pass this message to the login.php page
+         header("Location:login.php");
+
+     }
+     else echo "<p id=\"logoutMsg\">You cannot log out because you are not logged in.</p>"; */
+?>
