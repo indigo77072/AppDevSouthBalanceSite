@@ -1,0 +1,17 @@
+Pseudocode for Read function: getQuantityInStock
+
+***To be used in the Item Information Page backend***
+
+By Will, 3/9/23
+
+
+// this is the item ID to check the quantity of
+define input parameter param_item_id type: int
+
+// output variable w/ placeholder value
+int $result = 0;
+
+Store result of below query into $result:
+run MySQL: SELECT Quantity FROM inventory_items WHERE item_id = param_item_id;
+
+return $result;

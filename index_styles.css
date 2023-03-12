@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+/*
+    CSS Styles for index.php
+    Author: Will
+    Filename: index_styles.css
+*/
+
+div#searchBar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+input#search {
+    width: 320px;
+}
+
+div#bodyText {
+    margin: 40px auto auto auto;
+    width: 40%;
+}
+
+p {
+    margin: auto;
+    text-align: left;
+}
+
