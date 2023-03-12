@@ -1,7 +1,7 @@
 <!--
-    SB Login page
+    SB Rep Login page
     Author: Hector
-    Filename: about_us.php
+    Filename: login.php
 -->
 
 <!DOCTYPE html>
