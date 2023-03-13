@@ -4,6 +4,11 @@
             </div><div id="centerSection">
                 <h1 id="siteTitle">South Balance Online Store</h1>
             </div><div id="rightSection">
-                <p id="navigation">Home | About us | Catalog | Cart | Support | Logout</p>
+                <p id="navigation"><a href="index.php">Home</a> | 
+                <a href="about_us.php">About us</a> | 
+                <a href="index.php">Catalog</a> |
+                <a href="index.php">Cart</a> | 
+                <a href="index.php">Support</a> |
+                <a href="logout.php">Logout</a></p>
             </div>
         </header>

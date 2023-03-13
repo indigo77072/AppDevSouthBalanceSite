@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+/*
+    CSS Styles for header.php
+    Author: Will
+    Filename: item_information_styles.css
+*/
+
+div#upperSection {
+    width: 650px;
+    text-align: center;
+    /* auto height (?) b/c I'm not specifying it */
+    white-space: nowrap;
+    overflow-x: auto;
+
+    margin: 40px auto auto auto;
+
+    background-color: red;
+}
+
+div#upperLeftSection {
+    width: 40%;
+    text-align: left;
+    
+    /* commented-out b/c I'm not using this element as a parent for in-line childs */
+    white-space: nowrap;
+    overflow-x: auto;
+
+    display: inline-block; /* pertinent to child of parent container */
+
+    background-color: lime;
+    margin: auto;
+    /* padding-bottom: 20px; */
+}
+
+div#upperRightSection {
+    /* THIS MIGHT NEED A px setting for widht and height to get the vertical centering to work */
+    
+    height: 100%;
+    width: 60%;
+    text-align: left;
+    
+    /* commented-out b/c I'm not using this element as a parent for in-line childs */
+    white-space: nowrap;
+    overflow-x: auto;
+
+    display: inline-block; /* pertinent to child of parent container */
+
+    background-color: cyan;
+    margin-top: 0px;
+    /* margin-bottom: 0px; */
+
+    /* margin-top: auto; */
+    /* margin-bottom: auto; */
+
+    /* padding-bottom: 20px; */
+}
+
+img#product {
+    display: block;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    /* padding: 40px; */
+}
+
+div#briefItemInfoDiv {
+    /* code adapted from: https://stackoverflow.com/questions/11051951/how-do-i-vertically-align-text-in-a-paragraph */
+    /* position: relative;
+    top: 50%;
+    transform: translateY(-50%); */
+    background-color: lime;
+    height: 100%;
+}
+p#briefItemInfo {
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 90%;
+    text-align: center;
+    background-color: yellow;
+
+}
