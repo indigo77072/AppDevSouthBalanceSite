@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /*
-    CSS Styles for header.php
+    CSS Styles for item_information.php
     Author: Will
     Filename: item_information_styles.css
 */
@@ -102,6 +102,7 @@ div#lowerSection {
     margin: auto auto auto auto;
 
     background-color: brown;
+
 }
 
 div#lowerRightSection {
@@ -111,9 +112,12 @@ div#lowerRightSection {
     overflow-x: auto;
 
     display: inline-block; /* pertinent to child of parent container*/
+    padding-left: 20px;
 }
 
 div#lowerLeftSection {
+    top: 0px;
+
     width: 45%;
     background-color: orange;
 
@@ -121,6 +125,13 @@ div#lowerLeftSection {
     overflow-x: auto;
 
     display: inline-block; /* pertinent to child of parent container */
+
+    position: relative;
+    
+    margin: auto;
+    vertical-align: top;
+    
+    padding-left: 20px;
 }
 
 p#customization {
