@@ -23,15 +23,22 @@
         <div id="upperLeftSection">
                 <img src="graphics/sb_logo.png" id="product" alt="Item image placeholder">
             </div><div id="upperRightSection">
-                <p id="briefItemInfo">Test paragraph in upper right.</p>
+                <p id="briefItemInfo">Test paragraph in upper right.Test paragraph in upper right.<br>
+                $39.99
+                </p>
                 <!-- getItemName, getItemPrice -->
             </div></div><div id="lowerSection"><div id="lowerLeftSection">
                 <!-- select military branch & radio options TODO: include none option -->
+                <div id="customization">radio choices for customization</div>
             </div><div id="lowerRightSection">
+        
                 <!-- color chooser -->
+                radio choice for color 1 radio choice for color 2<br><br>
+                quantity spinner
+                
                 <!-- quantity spinner -->
                 <!-- add to cart button -->
-            </div>
+            </div></div>
 
         
 </body>
