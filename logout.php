@@ -14,9 +14,9 @@
         Will's guess: a logout script (PHP) will run when this webpage is loaded.
         
     </head>
-    <body>
+    <body> -->
 
-        <?php/* include 'header.php';
+        <!-- <php/* include 'header.php';
         // logout code adapted from:
         // https://www.oreilly.com/library/view/learning-php-mysql/9781449337452/ch21s14.html#:~:text=php%2C%20the%20logout%20page%20that,the%20top%20of%20the%20screen.
             if (isset($_SESSION['user']))

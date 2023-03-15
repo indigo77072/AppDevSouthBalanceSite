@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+/*
+    CSS Styles for cart.php
+    Author: Will
+    Filename: cart_styles.css
+*/
+
+.flex-container {
+    display: flex;
+    /* flex-direction: row-reverse; */
+    background-color: DodgerBlue;
+    border: 3px solid black;
+    justify-content: center;
+  }
+  
+  .flex-container > div {
+    background-color: #f1f1f1;
+    /* width: 300px; */
+    height: 600px;
+    /* margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px; */
+    border: 3px solid black;
+
+  }
+
+  .flex-container > div#leftColumn {
+    min-width: 350px;
+    margin-right: 50px;
+    text-align: center;
+  }
+  .flex-container > div#centerColumn {
+    min-width: 350px;
+    margin-right: 100px;
+
+
+  }
+
+  .flex-container > div#rightColumn {
+    min-width: 450px;
+    margin-right: 50px;
+  }
+
+  p#shippingConfigTitle {
+    /* text-align: center; */
+    /* border: 2px solid black; */
+    display: inline-block;
+    /* padding: 5px 10px; */
+    margin-top: 70px;
+    margin-left: 100px;
+    text-decoration: underline;
+    
+  }
+
+  div#shippingConfig {
+    margin-left: 110px;
+    /* border: 2px solid black; */
+  }
+
+  
+
+/* 
+body {
+    width: 100%;
+}
+
+div#bodyContainer {
+    white-space: nowrap;
+    overflow-x: visible;
+    width: 1100px;
+    position: absolute;
+    margin: auto 15% auto 65%;
+
+    right: 10%;
+    left: 10%;
+
+    top: auto;
+    right: 50px;
+    bottom: auto;
+    left: 200px;
+}
+
+div#leftColumn {
+    display: inline-block;
+    background-color: lime;
+    width: 30%;
+    
+
+}
+
+div#centerColumn {
+    display: inline-block;
+    background-color: red;
+    width: 30%;
+}
+
+div#rightColumn {
+    display: inline-block;
+    background-color: aqua;
+    width: 40%;
+}
+
+div#cartItemInfo {
+    width: 100px;
+    height: 300px;
+    border: 3px solid black;
+} */

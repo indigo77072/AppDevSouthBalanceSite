@@ -30,7 +30,7 @@
             </div></div><div id="lowerSection"><div id="lowerLeftSection">
 
                 <!-- select military branch & radio options TODO: include none option -->
-            <form action="/place_order_page.php">
+            <form action="/add_to_cart_page.php">
                 <div id="customization">
                     Select Military Branch<br>
 
