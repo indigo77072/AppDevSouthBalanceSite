@@ -16,13 +16,21 @@
     <body>
 
         <?php include 'header.php'; ?>
-
         <div class="flex-container">
-
+    
         <div id="leftColumn">
-            <img src="graphics/sb_logo.png">
+            <img src="graphics/item_placeHolder.png">
         </div>
-        <div id="centerColumn">Test</div>
+        <div id="centerColumn"><div id="itemInfo">
+        Bubba Radiant Stainless Steel Rubberized Water Bottle with Straw 32 oz.<br>
+            Color: Blue<br>
+            Quantity: 1<br>
+            Price: $22.99
+
+            <div id="deleteIconSection"><img src="graphics/trash.bmp" id="deleteIcon"></div>
+
+
+        </div></div>
         <div id="rightColumn">
         <form id="shippingConfig" action="/place_order_page.php">
             <p id="shippingConfigTitle">Select shipping method:
@@ -36,10 +44,11 @@
             
                 <input type="radio" id="express" name="shipping_choice" value="Express (6-24 hrs.)">
                 <label for="express">Express (6-24 hrs.)</label></div>
+                <div id="proceedToCheckoutDiv"><input type="submit" value="Proceed to checkout"></div>
             </form>
             </div>
         </div>
-        </div>
+        
 <!-- 
         <div id="bodyContainer">
         <div id="leftColumn">

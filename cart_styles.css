@@ -9,13 +9,13 @@
 .flex-container {
     display: flex;
     /* flex-direction: row-reverse; */
-    background-color: DodgerBlue;
-    border: 3px solid black;
+    /* background-color: green; */
+    /* border: 3px solid black; */
     justify-content: center;
   }
   
   .flex-container > div {
-    background-color: #f1f1f1;
+    
     /* width: 300px; */
     height: 600px;
     /* margin: 10px;
@@ -23,6 +23,7 @@
     line-height: 75px;
     font-size: 30px; */
     border: 3px solid black;
+    /* background-color: cyan; */
 
   }
 
@@ -30,10 +31,16 @@
     min-width: 350px;
     margin-right: 50px;
     text-align: center;
+    height: 400px;
+    /* margin-top: 200px; */
+    /* background-color: red; */
   }
+
   .flex-container > div#centerColumn {
     min-width: 350px;
+    /* padding-right: 60px; */
     margin-right: 100px;
+    height: 400px;
 
 
   }
@@ -41,6 +48,7 @@
   .flex-container > div#rightColumn {
     min-width: 450px;
     margin-right: 50px;
+    height: 400px;
   }
 
   p#shippingConfigTitle {
@@ -57,7 +65,61 @@
   div#shippingConfig {
     margin-left: 110px;
     /* border: 2px solid black; */
+
+    /* background-color: red; */
+
+
   }
+
+
+
+  div#proceedToCheckoutDiv {
+    position: relative;
+    margin-left: 110px;
+  }
+
+
+div#proceedToCheckoutDiv > input {
+  position: absolute;
+  right: 20px;
+  top: 200px;
+  /* bottom: 0; */
+
+}
+
+
+
+
+
+  div#leftColumn > img {
+    margin-top: 70px;
+  }
+
+div#centerColumn > div#itemInfo {
+  margin-top: 70px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 70px;
+
+  
+}
+
+div#deleteIconSection {
+  position: relative;
+  width: 330px;
+  height: 100px;
+
+}
+
+div#itemInfo > div#deleteIconSection > img {
+  /* width: 24px;
+  height: 27px; */
+  position: absolute;
+  /* vertical-align: bottom; */
+  right: 0;
+  bottom: 0;
+}
+
 
   
 
