@@ -18,52 +18,87 @@
         <?php include 'header.php'; ?>
         <div class="flex-container">
     
-        <div id="leftColumn">
+        <div class="leftColumn">
             <img src="graphics/item_placeHolder.png">
         </div>
-        <div id="centerColumn"><div id="itemInfo">
+        <div class="centerColumn"><div class="itemInfo">
         Bubba Radiant Stainless Steel Rubberized Water Bottle with Straw 32 oz.<br>
             Color: Blue<br>
             Quantity: 1<br>
             Price: $22.99
 
-            <div id="deleteIconSection"><img src="graphics/trash.bmp" id="deleteIcon"></div>
+            <div class="deleteIconSection"><img src="graphics/trash.bmp" class="deleteIcon"></div>
 
 
         </div></div>
-        <div id="rightColumn">
-        <form id="shippingConfig" action="/place_order_page.php">
-            <p id="shippingConfigTitle">Select shipping method:
-            </p><div id="shippingConfig">
+        <div class="rightColumn">
+        <form class="shippingConfig" action="/place_order_page.php">
+            <p class="shippingConfigTitle">Select shipping method:
+            </p><div class="shippingConfig">
 
-            <input type="radio" id="usps" name="shipping_choice" value="USPS (3-5 days) Standard cost">
+            <input type="radio" class="usps" name="shipping_choice" value="USPS (3-5 days) Standard cost">
                 <label for="usps">USPS (3-5 days) Standard cost</label><br>
 
-                <input type="radio" id="fedex" name="shipping_choice" value="FedEx (2 days)">
+                <input type="radio" class="fedex" name="shipping_choice" value="FedEx (2 days)">
                 <label for="fedex">FedEx (2 days)</label><br>
             
-                <input type="radio" id="express" name="shipping_choice" value="Express (6-24 hrs.)">
+                <input type="radio" class="express" name="shipping_choice" value="Express (6-24 hrs.)">
                 <label for="express">Express (6-24 hrs.)</label></div>
-                <div id="proceedToCheckoutDiv"><input type="submit" value="Proceed to checkout"></div>
+                <div class="proceedToCheckoutDiv"><input type="submit" value="Proceed to checkout"></div>
+            </form>
+            </div>
+        </div>
+
+        <!------------------ separation between 1st and 2nd cart items ------------->
+
+        <div class="flex-container">
+    
+        <div class="leftColumn">
+            <img src="graphics/item_placeHolder.png">
+        </div>
+        <div class="centerColumn"><div class="itemInfo">
+        Bubba Radiant Stainless Steel Rubberized Water Bottle with Straw 32 oz.<br>
+            Color: Blue<br>
+            Quantity: 1<br>
+            Price: $22.99
+
+            <div class="deleteIconSection"><img src="graphics/trash.bmp" class="deleteIcon"></div>
+
+
+        </div></div>
+        <div class="additionalItemRightColumn">
+        <form class="shippingConfig" action="/place_order_page.php">
+            <p class="shippingConfigTitle"><!--Select shipping method:-->
+            </p><div class="shippingConfig">
+
+            <!--<input type="radio" class="usps" name="shipping_choice" value="USPS (3-5 days) Standard cost">-->
+                <label for="usps"><!--USPS (3-5 days) Standard cost--></label><br>
+
+                <!--<input type="radio" class="fedex" name="shipping_choice" value="FedEx (2 days)">-->
+                <label for="fedex"><!--FedEx (2 days)--></label><br>
+            
+                <!--<input type="radio" class="express" name="shipping_choice" value="Express (6-24 hrs.)">-->
+                <label for="express"><!--Express (6-24 hrs.)--></label></div>
+                <div class="proceedToCheckoutDiv"><!--<input type="submit" value="Proceed to checkout">--></div>
             </form>
             </div>
         </div>
         
         
 <!-- 
-        <div id="bodyContainer">
-        <div id="leftColumn">
-        <img src="graphics/sb_logo.png" id="productImg" alt="Product Image">
+        <div class="bodyContainer">
+        <div class="leftColumn">
+        <img src="graphics/sb_logo.png" class="productImg" alt="Product Image">
         </div>
-        <div id="centerColumn">
-            <div id="cartItemInfo">
+        <div class="centerColumn">
+            <div class="cartItemInfo">
             test
             </div>
         
             
     
 </div>
-<div id="rightColumn">
+<div class="rightColumn">
 <p>test </p>
 </div>
 </div> -->

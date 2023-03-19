@@ -27,7 +27,7 @@
 
   }
 
-  .flex-container > div#leftColumn {
+  .flex-container > div.leftColumn {
     min-width: 350px;
     margin-right: 50px;
     text-align: center;
@@ -36,7 +36,7 @@
     /* background-color: red; */
   }
 
-  .flex-container > div#centerColumn {
+  .flex-container > div.centerColumn {
     min-width: 350px;
     /* padding-right: 60px; */
     margin-right: 100px;
@@ -45,14 +45,14 @@
 
   }
 
-  .flex-container > div#rightColumn {
+  .flex-container > div.rightColumn {
     min-width: 450px;
     margin-right: 50px;
     height: 400px;
     border: 2px solid black;
   }
 
-  p#shippingConfigTitle {
+  p.shippingConfigTitle {
     /* text-align: center; */
     /* border: 2px solid black; */
     display: inline-block;
@@ -63,7 +63,7 @@
     
   }
 
-  div#shippingConfig {
+  div.shippingConfig {
     margin-left: 110px;
     /* border: 2px solid black; */
 
@@ -74,13 +74,13 @@
 
 
 
-  div#proceedToCheckoutDiv {
+  div.proceedToCheckoutDiv {
     position: relative;
     margin-left: 110px;
   }
 
 
-div#proceedToCheckoutDiv > input {
+div.proceedToCheckoutDiv > input {
   position: absolute;
   right: 20px;
   top: 200px;
@@ -92,11 +92,11 @@ div#proceedToCheckoutDiv > input {
 
 
 
-  div#leftColumn > img {
+  div.leftColumn > img {
     margin-top: 70px;
   }
 
-div#centerColumn > div#itemInfo {
+div.centerColumn > div.itemInfo {
   margin-top: 70px;
   margin-left: 60px;
   margin-right: 60px;
@@ -105,20 +105,27 @@ div#centerColumn > div#itemInfo {
   
 }
 
-div#deleteIconSection {
+div.deleteIconSection {
   position: relative;
   width: 330px;
   height: 100px;
 
 }
 
-div#itemInfo > div#deleteIconSection > img {
+div.itemInfo > div.deleteIconSection > img {
   /* width: 24px;
   height: 27px; */
   position: absolute;
   /* vertical-align: bottom; */
   right: 0;
   bottom: 0;
+}
+
+div.additionalItemRightColumn {
+  min-width: 450px;
+  margin-right: 50px;
+  height: 400px;
+  /* border: 2px solid black; */
 }
 
 
