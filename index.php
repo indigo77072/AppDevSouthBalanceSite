@@ -65,6 +65,12 @@ $result = $conn->query($sql);
         }
         ?>
     </div>
+  
+    <footer>
+        <p>© 2023 Copyright & Powered By 
+          Tulane School of Professional Development
+        </p>
+    </footer>
 
 
 <!--
