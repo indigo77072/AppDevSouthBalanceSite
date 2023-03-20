@@ -2,32 +2,9 @@
 
 /*
     CSS Styles for index.php
-    Author: Will/ Hector
+    Author: Will
     Filename: index_styles.css
 */
-
-
-/* Header */
-
-header {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-nav {
-    display: flex;
-}
-
-nav a {
-    color: #fff;
-    margin-left: 20px;
-    text-decoration: none;
-}
-
-/* Search Bar */
 
 div#searchBar {
     margin-top: 20px;
@@ -36,81 +13,14 @@ div#searchBar {
 
 input#search {
     width: 320px;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 20px;
-    border: none;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
-
-/* Body Text */
 
 div#bodyText {
     margin: 40px auto auto auto;
-    width: 60%;
+    width: 40%;
 }
 
 p {
-    margin: 20px 0;
-    text-align: justify;
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-/* Featured Items */
-
-div#featuredItems {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 80px;
-}
-
-div.featuredItem {
-    width: 30%;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    text-align: center;
-}
-
-div.featuredItem img {
-    width: 80%;
-    margin-bottom: 20px;
-}
-
-h2.featuredItemTitle {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-p.featuredItemDesc {
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-button.featuredItemBtn {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-button.featuredItemBtn:hover {
-    background-color: #fff;
-    color: #333;
-    transition: background-color 0.3s ease;
-}
-
-/* Footer */
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+    margin: auto;
+    text-align: left;
 }
