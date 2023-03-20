@@ -5,30 +5,67 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
   header("location:login.php?msg2=$must_login");
 }
 
+// read data from the database for the items to be displayed
+$sql = "SELECT * FROM inventory_items WHERE Item_ID IN (6, 9, 1, 13)";
+$result = $conn->query($sql);
 ?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
-        <meta charset="UTF-8"></meta>
-        <link rel="stylesheet" href="header_styles.css">
-        <link rel="stylesheet" href="index_styles.css">
-        <title>South Balance - Home</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="header_styles.css">
+    <link rel="stylesheet" href="index_styles.css">
+    <title>South Balance - Home</title>
 </head>
+
 <body>
 
-<?php include 'header.php' ?>
+    <?php include 'header.php' ?>
 
-  <div id="searchBar">
-    <input type="text" id="search" placeholder="Search">
-</div>
-<div id="bodyText"><p>Radically Conscious. Obsessively Chill. Fanatically Zen.</p><br>
-<p class="bodyContent">Here at South Balance, we do “slowing down” differently. What started as a New Orleans-based mom-and-pop
-  retail operation has bloomed into one of the most popular and innovative suppliers of premium yoga mats
-  and merchandise in the United States and across the world. Recently named this year’s fastest growing company
-  by CIO magazine, we’re working hard to bring you the products and experience you expect and deserve. So go ahead; 
-  browse our site, explore our products, and picture yourself #fanaticallyzen.</p>
-</div>
+    <div id="searchBar">
+        <input type="text" id="search" placeholder="Search">
+    </div>
+    <div id="bodyText">
+        <p>Radically Conscious. Obsessively Chill. Fanatically Zen.</p><br>
+        <p class="bodyContent">Here at South Balance, we do “slowing down” differently. What started as a New
+            Orleans-based mom-and-pop retail operation has bloomed into one of the most popular and innovative
+            suppliers of premium yoga mats and merchandise in the United States and across the world. Recently
+            named this year’s fastest growing company by CIO magazine, we’re working hard to bring you the
+            products and experience you expect and deserve. So go ahead; browse our site, explore our products,
+            and picture yourself #fanaticallyzen.</p>
+    </div>
+
+    <div id="featuredItems">
+        <?php
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                Item_ID = $row["Item_ID"];
+                Item_Name = $row["Item_Name"];
+                Item_Description = $row["Item_Description"];
+                Item_Unit_Price = $row["Item_Unit_Price"];
+                $Item_Image = $row["Item_Image"];
+        ?>
+                <div class="item">
+                    <div class="itemImage">
+                        <img src="<?php echo $Item_Image; ?>" alt="<?php echo $Item_Name; ?>">
+                    </div>
+                    <div class="itemDescription">
+                        <h2><?php echo $Item_Name; ?></h2>
+                        <p><?php echo Item_Description; ?></p>
+                        <p><?php echo Item_Unit_Price; ?></p>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+        <?php
+            }
+        } else {
+            echo "0 results";
+        }
+        ?>
+    </div>
+
 
 
 
