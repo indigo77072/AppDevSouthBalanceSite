@@ -41,10 +41,10 @@ $result = $conn->query($sql);
         <?php
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                Item_ID = $row["Item_ID"];
-                Item_Name = $row["Item_Name"];
-                Item_Description = $row["Item_Description"];
-                Item_Unit_Price = $row["Item_Unit_Price"];
+                $Item_ID = $row["Item_ID"];
+                $Item_Name = $row["Item_Name"];
+                $Item_Description = $row["Item_Description"];
+                $Item_Unit_Price = $row["Item_Unit_Price"];
                 $Item_Image = $row["Item_Image"];
         ?>
                 <div class="item">
@@ -53,8 +53,8 @@ $result = $conn->query($sql);
                     </div>
                     <div class="itemDescription">
                         <h2><?php echo $Item_Name; ?></h2>
-                        <p><?php echo Item_Description; ?></p>
-                        <p><?php echo Item_Unit_Price; ?></p>
+                        <p><?php echo $Item_Description; ?></p>
+                        <p><?php echo $Item_Unit_Price; ?></p>
                         <button>Add to Cart</button>
                     </div>
                 </div>
@@ -65,8 +65,6 @@ $result = $conn->query($sql);
         }
         ?>
     </div>
-
-
 
 
 <!--
