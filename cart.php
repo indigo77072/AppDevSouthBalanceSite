@@ -58,10 +58,10 @@
             <img src="graphics/item_placeHolder.png">
         </div>
         <div class="centerColumn"><div class="itemInfo">
-        Bubba Radiant Stainless Steel Rubberized Water Bottle with Straw 32 oz.<br>
-            Color: Blue<br>
+        Bubba Hero Mug<br>
+            Color: Black<br>
             Quantity: 1<br>
-            Price: $22.99
+            Price: $17.99
 
             <div class="deleteIconSection"><img src="graphics/trash.bmp" class="deleteIcon"></div>
 
