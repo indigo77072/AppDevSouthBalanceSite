@@ -49,6 +49,7 @@
             </div>
         </div>
 
+        <hr class="itemDivider">
         <!------------------ separation between 1st and 2nd cart items ------------->
 
         <div class="flex-container">
