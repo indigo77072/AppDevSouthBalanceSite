@@ -1,3 +1,4 @@
+<?php
 include("database.php");
 if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
   $must_login="You must login first to access this page";
@@ -48,11 +49,7 @@ $result = $conn->query($sql);
         ?>
                 <div class="item">
                     <div class="itemImage">
-                        <?php if (file_exists($Item_Image)) { ?>
-                            <img src="<?php echo $Item_Image; ?>" alt="<?php echo $Item_Name; ?>">
-                        <?php } else { ?>
-                            <div style="width: 200px; height: 200px; background-color: lightgray;"></div>
-                        <?php } ?>
+                        <img src="<?php echo $Item_Image; ?>" alt="<?php echo $Item_Name; ?>">
                     </div>
                     <div class="itemDescription">
                         <h2><?php echo $Item_Name; ?></h2>
@@ -68,14 +65,12 @@ $result = $conn->query($sql);
         }
         ?>
     </div>
-  
+
     <footer>
         <p>© 2023 Copyright & Powered By 
           Tulane School of Professional Development
         </p>
     </footer>
-
-
 
 <!--
 // // Check connection
