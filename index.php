@@ -30,6 +30,61 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
   browse our site, explore our products, and picture yourself #fanaticallyzen.</p>
 </div>
 
+ <div id="featuredItems">
+        <div class="item">
+            <div class="itemImage">
+                <img id="test wb" src="products_images/test_wb.png">
+            </div>
+            <div class="itemDescription">
+                <h2>Item 1 Name</h2>
+                <p>Item 1 Description</p>
+                <p>Item 1 Price</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="itemImage">
+                <img id="test wb" src="products_images/test_wb.png">
+            </div>
+            <div class="itemDescription">
+                <h2>Item 2 Name</h2>
+                <p>Item 2 Description</p>
+                <p>Item 2 Price</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="itemImage">
+                <img id="test wb" src="products_images/test_wb.png">
+            </div>
+            <div class="itemDescription">
+                <h2>Item 3 Name</h2>
+                <p>Item 3 Description</p>
+                <p>Item 3 Price</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="itemImage">
+                <img id="test wb" src="products_images/test_wb.png">
+            </div>
+            <div class="itemDescription">
+                <h2>Item 4 Name</h2>
+                <p>Item 4 Description</p>
+                <p>Item 4 Price</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2023 Copyright & Powered By 
+          Tulane School of Professional Development
+        </p>
+    </footer>
 
 <!--
 // // Check connection
