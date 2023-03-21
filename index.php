@@ -1,92 +1,35 @@
 <?php
+include("database.php");
 if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
   $must_login="You must login first to access this page";
   header("location:login.php?msg2=$must_login");
 }
-?>
 
+?>
 <!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="header_styles.css">
-    <link rel="stylesheet" href="index_styles.css">
-    <title>South Balance - Home</title>
+        <meta charset="UTF-8"></meta>
+        <link rel="stylesheet" href="header_styles.css">
+        <link rel="stylesheet" href="index_styles.css">
+        <title>South Balance - Home</title>
 </head>
-
 <body>
 
-    <?php include 'header.php' ?>
+<?php include 'header.php' ?>
 
-    <div id="searchBar">
-        <input type="text" id="search" placeholder="Search">
-    </div>
-    <div id="bodyText">
-        <p>Radically Conscious. Obsessively Chill. Fanatically Zen.</p><br>
-        <p class="bodyContent">Here at South Balance, we do “slowing down” differently. What started as a New
-            Orleans-based mom-and-pop retail operation has bloomed into one of the most popular and innovative
-            suppliers of premium yoga mats and merchandise in the United States and across the world. Recently
-            named this year’s fastest growing company by CIO magazine, we’re working hard to bring you the
-            products and experience you expect and deserve. So go ahead; browse our site, explore our products,
-            and picture yourself #fanaticallyzen.</p>
-    </div>
+  <div id="searchBar">
+    <input type="text" id="search" placeholder="Search">
+</div>
+<div id="bodyText"><p>Radically Conscious. Obsessively Chill. Fanatically Zen.</p><br>
+<p class="bodyContent">Here at South Balance, we do “slowing down” differently. What started as a New Orleans-based mom-and-pop
+  retail operation has bloomed into one of the most popular and innovative suppliers of premium yoga mats
+  and merchandise in the United States and across the world. Recently named this year’s fastest growing company
+  by CIO magazine, we’re working hard to bring you the products and experience you expect and deserve. So go ahead; 
+  browse our site, explore our products, and picture yourself #fanaticallyzen.</p>
+</div>
 
-    <div id="featuredItems">
-        <div class="item">
-            <div class="itemImage">
-                <img id="test wb" src="products_images/test_wb.png">
-            </div>
-            <div class="itemDescription">
-                <h2>Item 1 Name</h2>
-                <p>Item 1 Description</p>
-                <p>Item 1 Price</p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="itemImage">
-                <img id="test wb" src="products_images/test_wb.png">
-            </div>
-            <div class="itemDescription">
-                <h2>Item 2 Name</h2>
-                <p>Item 2 Description</p>
-                <p>Item 2 Price</p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="itemImage">
-                <img id="test wb" src="products_images/test_wb.png">
-            </div>
-            <div class="itemDescription">
-                <h2>Item 3 Name</h2>
-                <p>Item 3 Description</p>
-                <p>Item 3 Price</p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="itemImage">
-                <img id="test wb" src="products_images/test_wb.png">
-            </div>
-            <div class="itemDescription">
-                <h2>Item 4 Name</h2>
-                <p>Item 4 Description</p>
-                <p>Item 4 Price</p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <p>© 2023 Copyright & Powered By 
-          Tulane School of Professional Development
-        </p>
-    </footer>
 
 <!--
 // // Check connection
