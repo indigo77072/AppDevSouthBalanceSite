@@ -35,7 +35,6 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
             <div class="itemImage">
                 <img id="test_wb" src="product_images/test_wb.png">
             </div>
-            <div class="itemDescription">
                 <button>Add to Cart</button>
             </div>
         </div>
@@ -44,7 +43,6 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
             <div class="itemImage">
                 <img id="test_wb" src="product_images/test_wb.png">
             </div>
-            <div class="itemDescription">
                 <button>Add to Cart</button>
             </div>
         </div>
@@ -53,7 +51,6 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
             <div class="itemImage">
                 <img id="test_wb" src="product_images/test_wb.png">
             </div>
-            <div class="itemDescription">
                 <button>Add to Cart</button>
             </div>
         </div>
@@ -62,7 +59,6 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
             <div class="itemImage">
                 <img id="test_wb" src="product_images/test_wb.png">
             </div>
-            <div class="itemDescription">
                 <button>Add to Cart</button>
             </div>
         </div>
