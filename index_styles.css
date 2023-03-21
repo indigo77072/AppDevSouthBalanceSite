@@ -2,7 +2,7 @@
 
 /*
     CSS Styles for index.php
-    Author: Will
+    Author: Will & Hector
     Filename: index_styles.css
 */
 
@@ -23,4 +23,33 @@ div#bodyText {
 p {
     margin: auto;
     text-align: left;
+}
+
+div#featuredItems {
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  margin: 10px;
+  border: 1px solid black;
+  width: 300px;
+  height: 400px;
+  text-align: center;
+}
+
+.itemImage {
+  height: 80%;
+}
+
+.itemImage img {
+  max-height: 100%;
+}
+
+button {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
 }
