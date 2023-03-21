@@ -11,6 +11,7 @@
                 <a href="index.php">Support</a> |
                 <a href="logout.php">Logout</a></p>
             </div>
+            
             <!-- Indigo: I will add emoji icons to represent some of these header tabs-->
         </header>
         
