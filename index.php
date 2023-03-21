@@ -1,13 +1,8 @@
 <?php
-include("database.php");
 if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
   $must_login="You must login first to access this page";
   header("location:login.php?msg2=$must_login");
 }
-
-// read data from the database for the items to be displayed
-$sql = "SELECT * FROM inventory_items WHERE Item_ID IN (6, 9, 1, 13)";
-$result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -38,32 +33,53 @@ $result = $conn->query($sql);
     </div>
 
     <div id="featuredItems">
-        <?php
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                $Item_ID = $row["Item_ID"];
-                $Item_Name = $row["Item_Name"];
-                $Item_Description = $row["Item_Description"];
-                $Item_Unit_Price = $row["Item_Unit_Price"];
-                $Item_Image = $row["Item_Image"];
-        ?>
-                <div class="item">
-                    <div class="itemImage">
-                        <img src="<?php echo $Item_Image; ?>" alt="<?php echo $Item_Name; ?>">
-                    </div>
-                    <div class="itemDescription">
-                        <h2><?php echo $Item_Name; ?></h2>
-                        <p><?php echo $Item_Description; ?></p>
-                        <p><?php echo $Item_Unit_Price; ?></p>
-                        <button>Add to Cart</button>
-                    </div>
-                </div>
-        <?php
-            }
-        } else {
-            echo "0 results";
-        }
-        ?>
+        <div class="item">
+            <div class="itemImage">
+                <img id="test wb" src="products_images/test_wb.png">
+            </div>
+            <div class="itemDescription">
+                <h2>Item 1 Name</h2>
+                <p>Item 1 Description</p>
+                <p>Item 1 Price</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="itemImage">
+                <img id="test wb" src="products_images/test_wb.png">
+            </div>
+            <div class="itemDescription">
+                <h2>Item 2 Name</h2>
+                <p>Item 2 Description</p>
+                <p>Item 2 Price</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="itemImage">
+                <img id="test wb" src="products_images/test_wb.png">
+            </div>
+            <div class="itemDescription">
+                <h2>Item 3 Name</h2>
+                <p>Item 3 Description</p>
+                <p>Item 3 Price</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="itemImage">
+                <img id="test wb" src="products_images/test_wb.png">
+            </div>
+            <div class="itemDescription">
+                <h2>Item 4 Name</h2>
+                <p>Item 4 Description</p>
+                <p>Item 4 Price</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
     </div>
 
     <footer>
