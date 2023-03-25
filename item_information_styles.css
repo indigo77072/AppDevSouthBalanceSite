@@ -94,10 +94,11 @@ p#briefItemInfo {
 
 div#lowerSection {
     width: 650px;
+    /* width: 675px; */
     text-align: left;
     /* auto height (?) b/c I'm not specifying it */
     white-space: nowrap;
-    overflow-x: auto;
+    overflow-x: hidden;
 
     margin: auto auto auto auto;
 
@@ -107,7 +108,7 @@ div#lowerSection {
 
 div#lowerRightSection {
     width: 55%;
-    /* background-color: white; */
+    /* background-color: green; */
     white-space: nowrap;
     overflow-x: auto;
 

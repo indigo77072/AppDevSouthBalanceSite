@@ -1,7 +1,7 @@
 <!--
     SB Item Information page
     Author: Will
-    Filename: logout.php
+    Filename: item_information.php
 -->
 
 <!DOCTYPE html>
