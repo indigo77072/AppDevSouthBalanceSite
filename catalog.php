@@ -32,7 +32,7 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
   border: 1px solid rgba(0, 0, 0, .125);
   border-radius: .25rem;
   margin-bottom: 15px;*/
-}
+/* } */
         </style>
         <title>South Balance - Catalog</title>
         <!-- Latest compiled and minified CSS -->

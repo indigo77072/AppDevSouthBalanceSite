@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!--
     SB Item Information page
     Author: Will
@@ -30,7 +34,7 @@
             </div></div><div id="lowerSection"><div id="lowerLeftSection">
 
                 <!-- select military branch & radio options TODO: include none option -->
-            <form action="/add_to_cart_page.php">
+            <form action="add_to_cart_process.php" method="post">
                 <div id="customization">
                     Select Military Branch<br>
 
@@ -68,7 +72,7 @@
                 <label for="black">Black</label>
                 <br>
                 <label for="quantity">Select quantity:</label>
-                <input type="number" id="quantity" name="quantity" min="1" max="5">
+                <input type="number" id="quantity" name="testQuantity" min="1" max="5">
                 <br>
                 <input type="submit" value="Add to cart">
             </form>

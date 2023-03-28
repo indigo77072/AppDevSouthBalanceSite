@@ -1,13 +1,27 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+
 <!--
-    This page is for testing various PHP code.
-    It includes a simple calculator.
+    This page is for testing various session PHP code.
 -->
+
+
 
 <html>
 <head>
 </head>
 <body>
+    
+    <?php
+    $_SESSION["favcolor"] = "green";
+    $_SESSION["favanimal"] = "cat";
+    echo "Session variables are set.";
+?>
 
+
+<a href="test_session.php">test session access</a>
 <form action="test.php" method="post">
     Num 1: <input type="number" name="num1"><br>
     OP: <input type="text" name="op"><br>
