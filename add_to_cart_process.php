@@ -1,15 +1,23 @@
 <?php
     include 'database.php';  // start session and connect to DB
 
-    $cart = $_SESSION["testCart"];  // the cart (an associative array variable)
-    $test_quantity = $cart["testQuantity"];  // the test quantity that was added to the cart
+    $test_quantity = $_GET["testQuantity"];
+    $test_customization = $_GET["customization"];
+    $test_color_choice = $_GET["color_choice"];
+
+    // $cart = $_SESSION["testCart"];  // the cart (an associative array variable)
+    // $test_quantity = $cart["testQuantity"];  // the test quantity that was added to the cart
 
     // TODO: query maximum quantity from DB and store in a local variable.
 
-    if ($test_quantity > 0) {
-        $_SESSION["cartTestQuantity"] = $test_quantity;
-        
-    }
+    // $_SESSION["cart"] = null;  // --- NOTE --- commented out b/c I'm trying to add the "cart" variable to the session.
+
+    $_SESSION["cart"]["testQuantity"] = $test_quantity;
+    $_SESSION["cart"]["testCustomization"] = $test_customization;
+    $_SESSION["cart"]["testColorChoice"] = $test_color_choice;
+
+    header('Location: cart.php');
+
 
 
 
