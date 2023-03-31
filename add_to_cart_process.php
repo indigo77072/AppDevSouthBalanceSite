@@ -12,6 +12,12 @@
 
     // $_SESSION["cart"] = null;  // --- NOTE --- commented out b/c I'm trying to add the "cart" variable to the session.
 
+    
+    if item_id (that's currently being processed) has already been added to the cart:
+        update that cart variable
+    else:
+        add to the cart (such as the test below).
+    
     $_SESSION["cart"]["testQuantity"] = $test_quantity;
     $_SESSION["cart"]["testCustomization"] = $test_customization;
     $_SESSION["cart"]["testColorChoice"] = $test_color_choice;
