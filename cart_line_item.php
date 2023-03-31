@@ -17,11 +17,18 @@ session_start();
         <div class="centerColumn"><div class="itemInfo">
         Bubba Radiant Stainless Steel Rubberized Water Bottle with Straw 32 oz.<br>
          
-            <?php echo "Color: " . $_SESSION["cart"]["testColorChoice"] . "<br>"; ?>
+            <!-- <?php echo "Color: " . $_SESSION["cart"]["testColorChoice"] . "<br>"; ?> -->
+
+
+
+            
+            <?php echo "Color: " . $specificColor1 . "<br>"; ?>
+            <?php echo "Quantity: " . $specificQuantity1 . "<br>"; ?>
+            
 
       
             
-            <?php echo "Quantity: " . $_SESSION["cart"]["testQuantity"] . "<br>"; ?>
+            <!-- <?php echo "Quantity: " . $_SESSION["cart"]["testQuantity"] . "<br>"; ?> -->
 
 
             Price: $22.99

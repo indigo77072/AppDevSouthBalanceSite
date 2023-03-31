@@ -19,6 +19,12 @@ session_start();
     </head>
     <body>
 
+        <?php
+
+            $specificColor1 = $_SESSION["cart"]["testColorChoice"];
+            $specificQuantity1 = $_SESSION["cart"]["testQuantity"];
+        ?>
+
         <?php include 'header.php'; ?>
         <div class="flex-container">
     
