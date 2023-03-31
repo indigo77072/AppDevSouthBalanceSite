@@ -6,7 +6,7 @@
     $test_color_choice = $_GET["color_choice"];
     if(isset($_GET["add"])){
         $item_id=$_GET["add"];
-      echo $add;
+      echo $item_id;
     }
     //$add = $_
 
