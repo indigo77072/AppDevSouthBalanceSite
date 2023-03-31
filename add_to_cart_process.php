@@ -1,6 +1,7 @@
 <?php
     include 'database.php';  // start session and connect to DB
 
+
     $test_quantity = $_GET["testQuantity"];
     $test_customization = $_GET["customization"];
     $test_color_choice = $_GET["color_choice"];
@@ -13,11 +14,15 @@
     // $_SESSION["cart"] = null;  // --- NOTE --- commented out b/c I'm trying to add the "cart" variable to the session.
 
     
-    if item_id (that's currently being processed) has already been added to the cart:
-        update that cart variable
-    else:
-        add to the cart (such as the test below).
+    // if item_id (that's currently being processed) has already been added to the cart:
+    //     update that cart variable
+    // else:
+    //     add to the cart (such as the test below).
     
+    foreach ($_SESSION as $cartItem) {
+        if 
+    }
+
     $_SESSION["cart"]["testQuantity"] = $test_quantity;
     $_SESSION["cart"]["testCustomization"] = $test_customization;
     $_SESSION["cart"]["testColorChoice"] = $test_color_choice;
