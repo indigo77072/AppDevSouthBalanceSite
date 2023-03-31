@@ -4,6 +4,11 @@
     $test_quantity = $_GET["testQuantity"];
     $test_customization = $_GET["customization"];
     $test_color_choice = $_GET["color_choice"];
+    if(isset($_GET["add"])){
+        $item_id=$_GET["add"];
+      echo $add;
+    }
+    //$add = $_
 
     // $cart = $_SESSION["testCart"];  // the cart (an associative array variable)
     // $test_quantity = $cart["testQuantity"];  // the test quantity that was added to the cart
@@ -16,7 +21,7 @@
     $_SESSION["cart"]["testCustomization"] = $test_customization;
     $_SESSION["cart"]["testColorChoice"] = $test_color_choice;
 
-    header('Location: cart.php');
+   // header('Location: cart.php');
 
 
 
