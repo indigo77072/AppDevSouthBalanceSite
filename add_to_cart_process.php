@@ -23,11 +23,20 @@
     //     update that cart variable
     // else:
     //     add to the cart (such as the test below).
+
+    $itemIDExistsInCart = false;
     
-    foreach ($_SESSION as $cartItem) {
-        if 
+    foreach ($_SESSION["cart"] as $cartItem) {
+        if ($cartItem["Item_ID"] === $item_id) {   // if cart item ID equals working item_id (which this page is processing)
+            $itemIDExistsInCart = true;
+        }  
     }
 
+    // NOTE: we're working on the code below here:
+    
+    // if ($itemIDExistsInCart) {
+    //     $_SESSION["cart"][""]  
+    // }
     $_SESSION["cart"]["testQuantity"] = $test_quantity;
     $_SESSION["cart"]["testCustomization"] = $test_customization;
     $_SESSION["cart"]["testColorChoice"] = $test_color_choice;
