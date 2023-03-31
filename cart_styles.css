@@ -33,7 +33,7 @@
     text-align: center;
     height: 400px;
     /* margin-top: 200px; */
-    /* background-color: red; */
+    background-color: red;
   }
 
   .flex-container > div.centerColumn {
@@ -41,6 +41,7 @@
     /* padding-right: 60px; */
     margin-right: 100px;
     height: 400px;
+    background-color: cyan;
 
 
   }
