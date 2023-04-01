@@ -51,7 +51,10 @@ div#upperRightSection {
 
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
+
+    /* TODO: NOTE: this belwo line was causing the item description text to not show up (only the price), so it's commented out */
+    /* transform: translateY(-50%); */
+
     /* background-color: lime; */
     height: 100%;
 
