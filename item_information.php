@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!--
     SB Item Information page
     Author: Will
@@ -19,19 +15,31 @@ session_start();
     </head>
     <body>
 
+
+    <?php
+        include('database.php');
+        include('get_item_information_process.php');
+
+        // $item_name, $item_unit_price, and $product_img_path can now be used.
+    ?>
         <?php include 'header.php'; ?>
 
 
         <!-- TODO: change the below to code for item information -->
         <div id="upperSection">
         <div id="upperLeftSection">
-                <img src="graphics/sb_logo.png" id="product" alt="Item image placeholder">
+                <img src="<?php echo $product_img_path;?>" id="water bottle" alt="Product image">
             </div><div id="upperRightSection">
-                <p id="briefItemInfo">Bubba 40 oz. Radiant Stainless Steel Rubberized Water Bottle<br>
-                $25.99
+                <p id="briefItemInfo"><?php echo $item_name;?> <br>
+                $<?php echo $item_unit_price;?>
                 </p>
                 <!-- getItemName, getItemPrice -->
-            </div></div><div id="lowerSection"><div id="lowerLeftSection">
+            </div><div id="middleSection">
+                <!-- <p id="itemDescription"> -->
+                Save your workday from cold coffee with the Bubba 18oz Hero Vacuum-Insulated Stainless Steel Travel Mug. Your drink stays hot up to 6 hours or cold up to 24 thanks to vacuum-insulated stainless steel, perfect in case you get stuck in a meeting and can't get back to your beverage. Sip from the leak-proof lid just by flipping up the locking flap, and snap it shut when you're finished to lock in the heat. A silicone base keeps the travel mug from sliding across your desk. When you're on the move, grab the comfortable handle and go! With the Hero Dual-Wall Vacuum-Insulated Stainless Steel Travel Mug, you're ready to get a handle on your day. Model: 2145787.
+                <!-- </p> -->
+
+            </div><div id="lowerSection"><div id="lowerLeftSection">
 
                 <!-- select military branch & radio options TODO: include none option -->
             <form action="add_to_cart_process.php" method="get">
@@ -40,6 +48,10 @@ session_start();
 
                     <input type="radio" id="noCustomization" name="customization" value="No Customization">
                     <label for="noCustomization">No customization</label><br>
+
+                    <input type="radio" id="patriotic" name="customization" value="Patriotic Customization">
+                    <label for="patriotic">Patriotic customization</label><br>
+
 
                 <input type="radio" id="army" name="customization" value="Army">
                 <label for="army">Army</label><br>       
@@ -65,11 +77,21 @@ session_start();
                 </div>
             </div><div id="lowerRightSection">
                 <!-- color chooser -->
-                <input type="radio" id="blue" name="color_choice" value="Blue">
+                <!-- <input type="radio" id="blue" name="color_choice" value="Blue">
                 <label for="blue">Blue</label><br>
 
                 <input type="radio" id="black" name="color_choice" value="Black">
-                <label for="black">Black</label>
+                <label for="black">Black</label> -->
+
+
+                Select a color:
+                <select name="color_choice" id="color_choice">
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+
+
+
                 <br>
                 <label for="quantity">Select quantity:</label>
                 <input type="number" id="quantity" name="testQuantity" min="1" max="100">
