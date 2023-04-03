@@ -1,14 +1,27 @@
 <?php
     include 'database.php';  // start session and connect to DB
 
-
-    $test_quantity = $_GET["testQuantity"];
-    $test_customization = $_GET["customization"];
-    $test_color_choice = $_GET["color_choice"];
     if(isset($_GET["add"])){
         $item_id=$_GET["add"];
       echo $item_id;
     }
+
+    $color_choice = $_GET["color_choice"];
+
+    // TODO: check / verify the following and potentially code with functions;
+
+    // if ( getColorChoice from DB for htis item id !== color choice)
+    // then refresh the page, with the proper item id for the color choice.
+
+    // e.g., item id is 5, color chocie is Green
+    // get color choice from DB is Blue !== Green is True
+    // thus refresh the page w/ item_id 6.
+
+    $quantity = $_GET["quantity"];
+    $customization = $_GET["customization"];
+    
+
+    
     //$add = $_
 
     // $cart = $_SESSION["testCart"];  // the cart (an associative array variable)
@@ -24,19 +37,23 @@
     // else:
     //     add to the cart (such as the test below).
 
-    $itemIDExistsInCart = false;
+    
+
+    $itemExistsInCart = false;
     
     foreach ($_SESSION["cart"] as $cartItem) {
         if ($cartItem["Item_ID"] === $item_id) {   // if cart item ID equals working item_id (which this page is processing)
-            $itemIDExistsInCart = true;
+            $itemExistsInCart = true;
         }  
     }
 
     // NOTE: we're working on the code below here:
     
-    // if ($itemIDExistsInCart) {
-    //     $_SESSION["cart"][""]  
-    // }
+    if ($itemIDExistsInCart) {
+        $_SESSION["cart"][""]  
+    }
+
+
     $_SESSION["cart"]["testQuantity"] = $test_quantity;
     $_SESSION["cart"]["testCustomization"] = $test_customization;
     $_SESSION["cart"]["testColorChoice"] = $test_color_choice;
