@@ -23,7 +23,10 @@
         // $item_name, $item_unit_price, and $product_img_path and $item_description can now be used.
     ?>
         <?php include 'header.php'; ?>
-
+        
+        <?php
+        echo "test - item_id is " . $item_id;
+        ?>
 
         <!-- TODO: change the below to code for item information -->
         <div id="upperSection">
@@ -44,7 +47,7 @@
             </div><div id="lowerSection"><div id="lowerLeftSection">
 
                 <!-- select military branch & radio options TODO: include none option -->
-            <form action="add_to_cart_process.php" method="get">
+            <form action="add_to_cart_process.php?add=<?php echo $item_id; ?>" method="post">
                 <div id="customization">
                     Select Customization<br><br>
 
@@ -96,7 +99,7 @@
 
                 <br>
                 <label for="quantity">Select quantity:</label>
-                <input type="number" id="quantity" name="testQuantity" min="1" max="100">
+                <input type="number" id="quantity" name="quantity" min="1" max="100">
                 <br><br>
                 <input type="submit" value="Add to cart">
             </form>

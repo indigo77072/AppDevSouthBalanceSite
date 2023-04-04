@@ -1,10 +1,15 @@
 <?php
     include 'database.php';  // start session and connect to DB
+    include 'item_id_and_color_list.php';  // includes code to get the right item_id
 
     if(isset($_GET["add"])){
         $item_id=$_GET["add"];
-      echo $item_id;
+    //   echo $item_id;  // Will commented this out b/c the above code works.
     }
+
+    // $item_id = $_GET["add"];
+
+    echo "item_id outside if block: " . $item_id;
 
     $color_choice = $_GET["color_choice"];
 
@@ -20,7 +25,7 @@
     $quantity = $_GET["quantity"];
     $customization = $_GET["customization"];
     
-
+    echo getItemIDFromItemColor($item_id, $color_choice);
     
     //$add = $_
 
@@ -39,24 +44,25 @@
 
     
 
-    $itemExistsInCart = false;
+
+    // $itemExistsInCart = false;
     
-    foreach ($_SESSION["cart"] as $cartItem) {
-        if ($cartItem["Item_ID"] === $item_id) {   // if cart item ID equals working item_id (which this page is processing)
-            $itemExistsInCart = true;
-        }  
-    }
+    // foreach ($_SESSION["cart"] as $cartItem) {
+    //     if ($cartItem["Item_ID"] === $item_id) {   // if cart item ID equals working item_id (which this page is processing)
+    //         $itemExistsInCart = true;
+    //     }  
+    // }
 
     // NOTE: we're working on the code below here:
     
-    if ($itemIDExistsInCart) {
-        $_SESSION["cart"][""]  
-    }
+    // if ($itemIDExistsInCart) {
+    //     $_SESSION["cart"][""]  
+    // }
 
 
-    $_SESSION["cart"]["testQuantity"] = $test_quantity;
-    $_SESSION["cart"]["testCustomization"] = $test_customization;
-    $_SESSION["cart"]["testColorChoice"] = $test_color_choice;
+    // $_SESSION["cart"]["testQuantity"] = $test_quantity;
+    // $_SESSION["cart"]["testCustomization"] = $test_customization;
+    // $_SESSION["cart"]["testColorChoice"] = $test_color_choice;
 
    // header('Location: cart.php');
 
