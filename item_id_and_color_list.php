@@ -25,16 +25,18 @@ function getItemIDFromItemColor($input_item_id, $color) {
     $indxItemPair = 0;  // counter to loop through the outer array within $item_id_and_color_array
 
     // go through the array, until the input_item_id is found.
-    for (; $indxItemPair < count($item_id_and_color_array) && !$item_id_found; $indxItemPair++) {
+    for (; ($indxItemPair < count($item_id_and_color_array)) && !$item_id_found; $indxItemPair++) {
 
-        if ($item_id_and_color_array[$indxItemPair][0] === $input_item_id
-            || $item_id_and_color_array[$indxItemPair][1] === $input_item_id) {
+        if ($item_id_and_color_array[$indxItemPair][0] == $input_item_id
+            || $item_id_and_color_array[$indxItemPair][1] == $input_item_id) {
                 $item_id_found = true;
         }
     }
+    $indxItemPair--;
+
     $blue_item_id = $item_id_and_color_array[$indxItemPair][0];
     $green_item_id = $item_id_and_color_array[$indxItemPair][1];
-    if ($color === "Blue") {
+    if ($color === "blue") {
         return $blue_item_id;
     }
     return $green_item_id;
