@@ -4,7 +4,7 @@
 
     // TODO: hard-code an array of the valid item id numbers, and check for membership in that array.
     if (!is_numeric($item_id)) {
-        echo "Error: The provided item_id is not a valid item number.";
+        echo "AppDev Error: The provided item_id is not a valid item number.";
     } else {
         $item_name_query = "SELECT Item_Name FROM inventory_items WHERE Item_ID = $item_id";
         $item_name_result = mysqli_query($conn, $item_name_query);

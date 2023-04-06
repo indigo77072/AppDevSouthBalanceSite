@@ -38,8 +38,7 @@
                 </p>
                 <!-- getItemName, getItemPrice -->
             </div><div id="middleSection">
-                <!-- <p id="itemDescription"> -->
-                <!-- Save your workday from cold coffee with the Bubba 18oz Hero Vacuum-Insulated Stainless Steel Travel Mug. Your drink stays hot up to 6 hours or cold up to 24 thanks to vacuum-insulated stainless steel, perfect in case you get stuck in a meeting and can't get back to your beverage. Sip from the leak-proof lid just by flipping up the locking flap, and snap it shut when you're finished to lock in the heat. A silicone base keeps the travel mug from sliding across your desk. When you're on the move, grab the comfortable handle and go! With the Hero Dual-Wall Vacuum-Insulated Stainless Steel Travel Mug, you're ready to get a handle on your day. Model: 2145787. -->
+                
                 <?php echo $item_description; ?>
 
                 <!-- </p> -->
