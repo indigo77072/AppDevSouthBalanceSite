@@ -20,7 +20,7 @@
         include('database.php');
         include('get_item_information_process.php');
 
-        // $item_name, $item_unit_price, and $product_img_path and $item_description can now be used.
+        // $item_name, $item_unit_price, and $product_img_path, $item_description and $item_color can now be used.
     ?>
         <?php include 'header.php'; ?>
         

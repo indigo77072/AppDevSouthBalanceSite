@@ -26,6 +26,11 @@
         $row = $item_description_result -> fetch_assoc();
         $item_description = $row["Item_Description"];
 
+        $item_color_query = "SELECT Item_Color FROM inventory_items WHERE Item_ID = $item_id";
+        $item_color_result = mysqli_query($conn, $item_color_query);
+        $row = $item_color_result -> fetch_assoc();
+        $item_color = $row["Item_Color"];
+
         $product_img_path = null;
         if ($type_of_item == "Yoga mat" || $type_of_item == "Yoga mat Kit") {
             $product_img_path = "product_images/yoga_mat.png";

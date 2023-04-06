@@ -7,5 +7,6 @@ include '../database.php';
 
 echo "print_r(conn variable): <br>";
 print_r($conn);
+// worked 4/6
 
 ?>
