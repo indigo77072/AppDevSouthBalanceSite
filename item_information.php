@@ -24,10 +24,6 @@
     ?>
         <?php include 'header.php'; ?>
         
-        <?php
-        echo "test - item_id is " . $item_id;
-        ?>
-
         <!-- TODO: change the below to code for item information -->
         <div id="upperSection">
         <div id="upperLeftSection">
