@@ -10,11 +10,11 @@
     if (!is_item_id_valid($item_id)) {
         echo "App Dev custom error: not a valid item_id <br>";
     } else {
-        $color_choice = $_POST["color_choice"];
-        $quantity = $_POST["quantity"];
-        $customization = $_POST["customization"];
+        $color_choice = $_POST["color_choice"];  // the color choice the user requested for the items to add.
+        $quantity_to_add = $_POST["quantity"];  // the additional quantity the user requested to add
+        $customization = $_POST["customization"];  // the customization for the item(s) the user requested
 
-        $correct_item_id = getItemIDFromItemColor($item_id, $color_choice);
+        $correct_item_id = getItemIDFromItemColor($item_id, $color_choice);  // the item id that is correct for a given color.
 
         $curr_item_already_in_cart = false;
 
@@ -92,6 +92,18 @@
         //         break;
         //     }
         // }
+
+        
+
+        // increase the quantity of an item which is already in the cart.
+        function increase_cart_item_quantity($cart_line_item_index, $num_items_to_add) {
+            
+            global $inventory_items_quantity;  // the quantity of the 
+            $existing_quantity = $inventory_items_quantity;
+
+
+
+        }
 
         if (isset($matching_line_item_index)) {
             // update the quantity.

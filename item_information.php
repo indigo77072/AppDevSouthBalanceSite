@@ -29,13 +29,13 @@
         <div id="upperLeftSection">
                 <img src="<?php echo $product_img_path;?>" id="water bottle" alt="Product image">
             </div><div id="upperRightSection">
-                <p id="briefItemInfo"><?php echo $item_name;?> <br>
-                $<?php echo $item_unit_price;?>
+                <p id="briefItemInfo"><?php echo $inventory_items_item_name;?> <br>
+                $<?php echo $inventory_items_item_unit_price;?>
                 </p>
                 <!-- getItemName, getItemPrice -->
             </div><div id="middleSection">
                 
-                <?php echo $item_description; ?>
+                <?php echo $inventory_items_item_description; ?>
 
                 <!-- </p> -->
 
