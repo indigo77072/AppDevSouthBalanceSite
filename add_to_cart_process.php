@@ -56,11 +56,11 @@
         // $test_customization_3 = "Space Force";
         // $test_quantity_3 = 1;
 
-        // $_SESSION["cart"] = array();
-        // $_SESSION["cart"][0] = array("item_id"=>$test_id_0, "customization"=>$test_customization_0, "quantity"=>$test_quantity_0);
-        // $_SESSION["cart"][1] = array("item_id"=>$test_id_1, "customization"=>$test_customization_1, "quantity"=>$test_quantity_1);
-        // $_SESSION["cart"][2] = array("item_id"=>$test_id_2, "customization"=>$test_customization_2, "quantity"=>$test_quantity_2);
-        // $_SESSION["cart"][3] = array("item_id"=>$test_id_3, "customization"=>$test_customization_3, "quantity"=>$test_quantity_3);
+        $_SESSION["cart"] = array();
+        $_SESSION["cart"][0] = array("item_id"=>$test_id_0, "customization"=>$test_customization_0, "quantity"=>$test_quantity_0);
+        $_SESSION["cart"][1] = array("item_id"=>$test_id_1, "customization"=>$test_customization_1, "quantity"=>$test_quantity_1);
+        $_SESSION["cart"][2] = array("item_id"=>$test_id_2, "customization"=>$test_customization_2, "quantity"=>$test_quantity_2);
+        $_SESSION["cart"][3] = array("item_id"=>$test_id_3, "customization"=>$test_customization_3, "quantity"=>$test_quantity_3);
 
 
         $matching_line_item_index = null; 
