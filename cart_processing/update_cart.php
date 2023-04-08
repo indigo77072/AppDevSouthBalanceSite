@@ -10,9 +10,14 @@ Date created: 4/8/23 */
 // Will adapted this code which Indigo wrote.
 if (isset($_POST["item_id"])) {
     $item_id = $_POST["item_id"];
-    echo "item_id: " . $item_id . " is set.";
+    echo "initial item_id: " . $item_id . " is set.";
 }
 
+include 'item_id_validation.php';
+
+if (!is_valid_item_id($item_id)) {
+    echo "App Dev custom error: not a valid item_id <br>";
+}
 // the following check should be done in create_potential_cart_line_item.php
 // include 'item_id_validation.php';
 
@@ -20,13 +25,43 @@ if (isset($_POST["item_id"])) {
 //     echo "App Dev custom error: not a valid item_id <br>";
 // }
 
+
 include 'create_potential_cart_line_item.php';
+$correct_item_id = get_item_id_from_item_color($item_id, $color_choice);  // the item id that is correct for a given color.
+
+
+
+
+$potential_cart_line_item = create_potential_cart_line_item($correct_item_id);
+
+
+
 
 // testing code below
 echo "details print_r for the potential cart line item:<br><br>";
-print_r(create_potential_cart_line_item($item_id));
+print_r($potential_cart_line_item);  // for testing
+echo "<br><br>";
+
 
 // include other mid-level scripts
+include 'determine_if_cart_line_item_exists.php';
+
+$potential_cart_line_item_exists = determine_if_cart_line_item_exists($potential_cart_line_item);
+
+$existing_cart_line_item_number = null;
+if ($potential_cart_line_item_exists) {
+    $existing_cart_line_item_number = get_existing_cart_line_item_number($potential_cart_line_item);
+}
+
+// Here, either 1 of 2 things are true: either 1) $potential_cart_line_item is a new itemID/customiztation combo,
+// or 2) $potential_cart_line_item matches an existing cart line item, whose number is $existing_cart_line_item_number
+
+// testing:
+if ($potential_cart_line_item_exists) {
+    echo "cart line item already exists - " . "existing_cart_line_item_number is " . $existing_cart_line_item_number;
+} else {
+    echo "cart line item is new.";
+}
 
 // $quantity_requested = get_quantity_requested($working_cart_line_item);
 
