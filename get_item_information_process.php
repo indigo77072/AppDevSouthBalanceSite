@@ -1,5 +1,4 @@
 <?php
-
     $item_id = $_GET["item_id"];  // get the item_id (from what the user clicked on)
 
     // TODO: hard-code an array of the valid item id numbers, and check for membership in that array.
@@ -32,9 +31,9 @@
         $inventory_items_item_color = $row["Item_Color"];
 
         $quantity_query = "SELECT Quantity FROM inventory_items WHERE Item_ID = $item_id";
-        $quantity_result = mysqli_query($conn, $item_color_query);
+        $quantity_result = mysqli_query($conn, $quantity_query);
         $row = $quantity_result -> fetch_assoc();
-        $inventory_items_quantity = $row["Item_Color"];
+        $inventory_items_quantity = $row["Quantity"];
 
         // item size is stored in DB; it's not accessed in this script (yet).
 

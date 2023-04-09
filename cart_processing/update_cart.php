@@ -4,7 +4,7 @@ Author: Will
 Date created: 4/8/23 */
 
 
-// include 'database.php';  // start session and connect to DB
+include '../database.php';  // start session and connect to DB
 // include 'item_id_and_color_list.php';  // includes code to get the right item_id
 
 // Will adapted this code which Indigo wrote.
@@ -75,7 +75,20 @@ $quantity_requested = compute_quantity_requested($potential_cart_line_item);
 // include script for high-level item 2 on my refactor sheet
 
 include 'compute_quantity_to_order.php';
-$quantity_to_order = compute_quantity_to_order($working_cart_line_item, $quantity_requested);
+$quantity_to_order = compute_quantity_to_order($correct_item_id, $quantity_requested);
+
+///test
+echo "Cart contents:<br><br>";
+$cart_index = 0;  // the cart line item #
+for (; $cart_index < count($_SESSION["cart"]); $cart_index++) {
+    echo "cart line item " . $cart_index . ":<br>";
+    print_r($_SESSION["cart"][$cart_index]);
+    echo "<br><br>";
+}
+
+echo "correct_item_id: " . $correct_item_id;
+echo "<br>";
+echo "quantity_to order: " . $quantity_to_order;
 
 // given $working_cart_line_item and $quantity_to_order, update the cart variable.
 
