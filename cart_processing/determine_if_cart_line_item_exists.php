@@ -11,15 +11,15 @@ Date created: 4/8/23 */
 
         $test_id_1 = 1;
         $test_customization_1 = "No Customization";
-        $test_quantity_1 = 3;
+        $test_quantity_1 = 5;
 
         $test_id_2 = 1;
         $test_customization_2 = "Patriotic Customization";
-        $test_quantity_2 = 7;
+        $test_quantity_2 = 5;
 
-        $test_id_3 = 15;
+        $test_id_3 = 17;
         $test_customization_3 = "Space Force";
-        $test_quantity_3 = 1;
+        $test_quantity_3 = 20;
 
         $_SESSION["cart"] = array();
         $_SESSION["cart"][0] = array("item_id"=>$test_id_0, "customization"=>$test_customization_0, "quantity"=>$test_quantity_0);

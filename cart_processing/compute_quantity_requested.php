@@ -3,23 +3,31 @@
 Author: Will
 Date created: 4/8/23 */
 
-function tally_preexisting_quantity_requested($correct_item_id) {
+// count the total of the item_id already in the cart.
+function count_preexisting_quantity_requested($correct_item_id) {
 
-}
+    $count = 0;  // the count of preexisting quantity requested
+    $cart_index = 0;  // the cart line item #
+    for (; $cart_index < count($_SESSION["cart"]); $cart_index++) {
 
-function get_existing_cart_item($existing_cart_line_item_number) {
-
-}
-
-// $preexisting_cart_line_item is either null (for a brand new cart line item scenario) or not null (for the scenario where it should be updated)
-function compute_quantity_requested($preexisting_cart_line_item, $potential_cart_line_item) {
-    if (!isset($preexisting_cart_line_item)) {
-        $quantity_requested = $potential_cart_line_item["quantity"];
-    } else {  // in this case, the working carrt line item is existing in the cart, already.
-        $preexisting_quantity = $preexisting_cart_line_item["quantity"];
-        $additional_quantity = $potential_cart_line_item["quantity"];
-        $quantity_requested = $preexisting_quantity + $additional_quantity;
+        $cart_line_item = $_SESSION["cart"][$cart_index];
+        if ($cart_line_item["item_id"] == $correct_item_id) {        
+            $count += $cart_line_item["quantity"];
+        }
     }
-    return $quantity_requested;
-    
+    return $count;
+}
+
+// return a total number requested of the item.
+function compute_quantity_requested($potential_cart_line_item) {
+
+    $item_id = $potential_cart_line_item["item_id"];  // the item id to total the quantity requested of
+    $prev_quantity = count_preexisting_quantity_requested($item_id);  // the preexisting quantity requested (of the items, regardless of their customizations)
+    $new_num_requested = $potential_cart_line_item["quantity"];  // the new count of the item that is requested
+
+    if ($prev_quantity == 0) {
+        return $new_num_requested;
+    } else {
+        return $prev_quantity + $new_num_requested;
+    }
 }
