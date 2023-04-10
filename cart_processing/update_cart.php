@@ -95,9 +95,17 @@ include 'finalize_cart_line_item.php';
 
 if ($potential_cart_line_item_exists) {
     // modify the existing line item
+    
+
 } else {
     // finalize the potential cart line item
+    $finalized_cart_line_item = get_final_cart_line_item($potential_cart_line_item, $quantity_to_order);
+
+
+    // testing
+
     // store teh finalized line item
+
 }
 
 
