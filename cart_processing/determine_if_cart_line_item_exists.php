@@ -28,6 +28,7 @@ Date created: 4/8/23 */
         $_SESSION["cart"][3] = array("item_id"=>$test_id_3, "customization"=>$test_customization_3, "quantity"=>$test_quantity_3);
 
 
+// Determine whether the details of an input line item match those details of an existing line item.
 function determine_if_cart_line_item_exists($cart_line_item) {
 
     $cart_line_item_already_exists = false;
@@ -45,6 +46,7 @@ function determine_if_cart_line_item_exists($cart_line_item) {
         return $cart_line_item_already_exists;
 }
 
+// This input cart lien item is the one which is being updated. (it's not a totally new cart line item).
 function get_existing_cart_line_item_number($cart_line_item) {
 
     $matching_line_item_index = null; 

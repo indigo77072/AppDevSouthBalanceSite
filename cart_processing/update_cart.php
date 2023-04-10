@@ -7,7 +7,7 @@ Date created: 4/8/23 */
 include '../database.php';  // start session and connect to DB
 // include 'item_id_and_color_list.php';  // includes code to get the right item_id
 
-// Will adapted this code which Indigo wrote.
+// Will edited this code which Indigo wrote.
 if (isset($_POST["item_id"])) {
     $item_id = $_POST["item_id"];
     echo "initial item_id: " . $item_id . " is set.";
@@ -90,8 +90,15 @@ echo "correct_item_id: " . $correct_item_id;
 echo "<br>";
 echo "quantity_to order: " . $quantity_to_order;
 
-// given $working_cart_line_item and $quantity_to_order, update the cart variable.
+// given $potential_cart_line_item and $quantity_to_order, update the cart variable.
+include 'finalize_cart_line_item.php';
 
+if ($potential_cart_line_item_exists) {
+    // modify the existing line item
+} else {
+    // finalize the potential cart line item
+    // store teh finalized line item
+}
 
 
 
