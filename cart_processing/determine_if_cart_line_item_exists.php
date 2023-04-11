@@ -30,11 +30,13 @@ Date created: 4/8/23 */
 
 
 // Determine whether the details of an input line item match those details of an existing line item.
+// we want this to return false if nothing was in the cart/new cart.
 function determine_if_cart_line_item_exists($cart_line_item) {
 
     $cart_line_item_already_exists = false;
 
-    if (is_null($_SESSION["cart"])) {
+    // if (is_null($_SESSION["cart"])) {
+    if (!isset($_SESSION["cart"])) {
         return false;
     }
     $working_item_id = $cart_line_item["item_id"];
@@ -51,6 +53,7 @@ function determine_if_cart_line_item_exists($cart_line_item) {
 }
 
 // This input cart lien item is the one which is being updated. (it's not a totally new cart line item).
+// note: Will thinks this doesn't need a !isset check for the cart vairable.
 function get_existing_cart_line_item_number($cart_line_item) {
 
     $matching_line_item_index = null; 

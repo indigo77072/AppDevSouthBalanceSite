@@ -107,12 +107,29 @@ include 'finalize_cart_line_item.php';
 
 
 if ($potential_cart_line_item_exists) {
-    $quantity_line_item = $quantity_to_order - count_preexisting_quantity_requested($correct_item_id);
+
+    echo "in potential cart line item exists. <br><br>";
+    
+    $prev_quantity = count_preexisting_quantity_requested($correct_item_id);
+    $quantity_line_item = $quantity_to_order - $prev_quantity;
+
+    
+
+    echo "quant. to order: " . $quantity_to_order . "<br>";
+    echo "prev quant.: " . $prev_quantity . "<br>";
+    echo "new quant. of line item: " . $quantity_line_item . "<br>";
+
+    
+    echo "existing_cart_line_item_number: " . $existing_cart_line_item_number . "<br>";
+    echo "count(Session): <br>";
+    echo count($_SESSION["cart"]);
 
     // update the cart
     $_SESSION["cart"][$existing_cart_line_item_number]["quantity"] = $quantity_line_item;
 
 } else {
+
+    echo "in the else block - brand new cart item is being worked on <br><br>";
     // finalize the potential cart line item
     $finalized_cart_line_item = get_final_cart_line_item($potential_cart_line_item, $quantity_to_order);
 
@@ -122,7 +139,7 @@ if ($potential_cart_line_item_exists) {
     // print_r($finalized_cart_line_item);
 
     // store teh finalized line item in the cart
-    if (is_null($_SESSION["cart"])) {
+    if (!isset($_SESSION["cart"])) {
         $new_cart_item_number = 0;
     } else {
         $new_cart_item_number = count($_SESSION["cart"]) + 1;
@@ -135,6 +152,11 @@ if ($potential_cart_line_item_exists) {
 // testing 4/10 pm: trying adding to cart various times, including item combos I already added before.
 
 // needs logic error debugging.
+
+echo "Session count fncn: <br>";
+echo count($_SESSION["cart"]);
+echo "<br>";
+echo "<br>";
 
 echo "Cart contents:<br><br>";
 $cart_index = 0;  // the cart line item #

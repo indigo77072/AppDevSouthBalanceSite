@@ -6,7 +6,7 @@ Date created: 4/8/23 */
 // count the total of the item_id already in the cart.
 function count_preexisting_quantity_requested($correct_item_id) {
 
-    if (is_null($_SESSION["cart"])) {
+    if (!isset($_SESSION["cart"])) {
         return 0;
     }
 
