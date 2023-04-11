@@ -43,6 +43,11 @@ $potential_cart_line_item = create_potential_cart_line_item($correct_item_id);
 // print_r($potential_cart_line_item);  // for testing
 // echo "<br><br>";
 
+// initialize the cart if nothing has been added yet
+
+
+// $_SESSION["cart"] = null;
+
 
 // include other mid-level scripts
 include 'determine_if_cart_line_item_exists.php';
@@ -78,6 +83,59 @@ include 'compute_quantity_to_order.php';
 $quantity_to_order = compute_quantity_to_order($correct_item_id, $quantity_requested);
 
 ///test
+// echo "Cart contents:<br><br>";
+// $cart_index = 0;  // the cart line item #
+// for (; $cart_index < count($_SESSION["cart"]); $cart_index++) {
+//     echo "cart line item " . $cart_index . ":<br>";
+//     print_r($_SESSION["cart"][$cart_index]);
+//     echo "<br><br>";
+// }
+
+// echo "correct_item_id: " . $correct_item_id;
+// echo "<br>";
+// echo "quantity_to order: " . $quantity_to_order;
+// echo "<br>";
+// echo "<br>";
+
+// given $potential_cart_line_item and $quantity_to_order, update the cart variable.
+
+
+
+
+include 'finalize_cart_line_item.php';
+
+
+
+if ($potential_cart_line_item_exists) {
+    $quantity_line_item = $quantity_to_order - count_preexisting_quantity_requested($correct_item_id);
+
+    // update the cart
+    $_SESSION["cart"][$existing_cart_line_item_number]["quantity"] = $quantity_line_item;
+
+} else {
+    // finalize the potential cart line item
+    $finalized_cart_line_item = get_final_cart_line_item($potential_cart_line_item, $quantity_to_order);
+
+
+    // testing - worked 4/10 6:32pm
+    // echo "the new, finalized cart line item:<br><br>";
+    // print_r($finalized_cart_line_item);
+
+    // store teh finalized line item in the cart
+    if (is_null($_SESSION["cart"])) {
+        $new_cart_item_number = 0;
+    } else {
+        $new_cart_item_number = count($_SESSION["cart"]) + 1;
+    }
+    $_SESSION["cart"][$new_cart_item_number] = $finalized_cart_line_item;
+
+}
+
+
+// testing 4/10 pm: trying adding to cart various times, including item combos I already added before.
+
+// needs logic error debugging.
+
 echo "Cart contents:<br><br>";
 $cart_index = 0;  // the cart line item #
 for (; $cart_index < count($_SESSION["cart"]); $cart_index++) {
@@ -86,28 +144,12 @@ for (; $cart_index < count($_SESSION["cart"]); $cart_index++) {
     echo "<br><br>";
 }
 
-echo "correct_item_id: " . $correct_item_id;
-echo "<br>";
-echo "quantity_to order: " . $quantity_to_order;
-
-// given $potential_cart_line_item and $quantity_to_order, update the cart variable.
-include 'finalize_cart_line_item.php';
-
-if ($potential_cart_line_item_exists) {
-    // modify the existing line item
-    
-
-} else {
-    // finalize the potential cart line item
-    $finalized_cart_line_item = get_final_cart_line_item($potential_cart_line_item, $quantity_to_order);
-
-
-    // testing
-
-    // store teh finalized line item
-
-}
-
-
-
 ?>
+
+<html>
+<body>
+    <a href="test_update_cart.php?item_id=1">Go back to the test-update-cart page</a>
+
+</body>
+
+</html>

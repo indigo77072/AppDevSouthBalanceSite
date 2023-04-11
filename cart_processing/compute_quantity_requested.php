@@ -6,6 +6,10 @@ Date created: 4/8/23 */
 // count the total of the item_id already in the cart.
 function count_preexisting_quantity_requested($correct_item_id) {
 
+    if (is_null($_SESSION["cart"])) {
+        return 0;
+    }
+
     $count = 0;  // the count of preexisting quantity requested
     $cart_index = 0;  // the cart line item #
     for (; $cart_index < count($_SESSION["cart"]); $cart_index++) {
