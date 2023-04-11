@@ -1,0 +1,66 @@
+///test
+// echo "Cart contents:<br><br>";
+// $cart_index = 0;  // the cart line item #
+// for (; $cart_index < count($_SESSION["cart"]); $cart_index++) {
+//     echo "cart line item " . $cart_index . ":<br>";
+//     print_r($_SESSION["cart"][$cart_index]);
+//     echo "<br><br>";
+// }
+
+// echo "correct_item_id: " . $correct_item_id;
+// echo "<br>";
+// echo "quantity_to order: " . $quantity_to_order;
+// echo "<br>";
+// echo "<br>";
+
+// given $potential_cart_line_item and $quantity_to_order, update the cart variable.
+
+
+
+
+
+   // $prev_quantity = count_preexisting_quantity_requested($correct_item_id);
+
+    // we onlyt want the prev quantity from teh matching cart lien item, not the entire item_id quantity.
+
+    // $prev_quantity = $potential_cart_line_item["quantity"];
+
+    // $quantity_line_item = $quantity_to_order - $prev_quantity;
+
+    
+
+    // echo "quant. to order: " . $quantity_to_order . "<br>";
+    // echo "prev quant.: " . $prev_quantity . "<br>";
+    // echo "new quant. of line item: " . $quantity_line_item . "<br>";
+
+    
+    // echo "existing_cart_line_item_number: " . $existing_cart_line_item_number . "<br>";
+    // echo "count(Session): <br>";
+    // echo count($_SESSION["cart"]);
+
+
+
+    // testing - worked 4/10 6:32pm
+    // echo "the new, finalized cart line item:<br><br>";
+    // print_r($finalized_cart_line_item);
+
+
+// testing 4/10 pm: trying adding to cart various times, including item combos I already added before.
+
+// needs logic error debugging.
+
+// echo "Session count fncn: <br>";
+// echo count($_SESSION["cart"]);
+// echo "<br>";
+// echo "<br>";
+
+
+
+    echo "quantity_requsted is: " . $quantity_requested;
+    echo "<br><br>";
+
+    echo "quantity_to_order is: " . $quantity_to_order;
+    echo "<br><br>";
+
+    echo "other line item quantity total is: " . $other_line_item_quantity_total;
+    echo "<br><br>";
