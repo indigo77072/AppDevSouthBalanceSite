@@ -24,9 +24,9 @@
     // else:
     //     add to the cart (such as the test below).
     
-    foreach ($_SESSION as $cartItem) {
+   /* foreach ($_SESSION as $cartItem) {
         if 
-    }
+    }*/
 
     $_SESSION["cart"]["testQuantity"] = $test_quantity;
     $_SESSION["cart"]["testCustomization"] = $test_customization;
