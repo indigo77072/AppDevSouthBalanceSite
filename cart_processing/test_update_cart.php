@@ -61,7 +61,7 @@ Date created: 4/8/23 -->
 
                 <br>
                 <label for="quantity">Select quantity:</label>
-                <input type="number" id="quantity" name="quantity" min="1" max="100">
+                <input type="number" id="quantity" name="quantity" min="1">
                 <br><br>
                 <input type="submit" value="Add to cart">
             </form>

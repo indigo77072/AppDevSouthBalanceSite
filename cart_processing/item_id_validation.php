@@ -4,7 +4,6 @@ Author: Will
 Date created: 4/8/23 */
 
 // sub-arrays: index 0 is a blue item, index 1 a green one.
-
 $item_id_and_color_array = array (
     array(1, 25),
     array(2, 19),

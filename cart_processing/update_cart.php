@@ -41,22 +41,16 @@ $quantity_to_order = compute_quantity_to_order($correct_item_id, $quantity_reque
 include 'finalize_cart_line_item.php';
 
 if ($potential_cart_line_item_exists) {
-
-    echo "in potential cart line item exists. <br><br>";
-
     include 'compute_other_line_item_quantity.php';
     $other_line_item_quantity_total
         = compute_other_line_item_quantity_total($correct_item_id, $quantity_to_order, $existing_cart_line_item_number);
 
     $new_quantity = $quantity_to_order - $other_line_item_quantity_total;
     
- 
     // update the cart
     $_SESSION["cart"][$existing_cart_line_item_number]["quantity"] = $new_quantity;
 
 } else {
-
-    // echo "in the else block - brand new cart item is being worked on <br><br>";
     // finalize the potential cart line item
     $finalized_cart_line_item = get_final_cart_line_item($potential_cart_line_item, $quantity_to_order);
 
@@ -64,7 +58,6 @@ if ($potential_cart_line_item_exists) {
     if (!isset($_SESSION["cart"])) {
         $new_cart_item_number = 0;
     } else {
-        // $new_cart_item_number = count($_SESSION["cart"]) + 1;
         $new_cart_item_number = count($_SESSION["cart"]);
     }
     $_SESSION["cart"][$new_cart_item_number] = $finalized_cart_line_item;
@@ -75,8 +68,6 @@ echo "Cart contents:<br><br>";
 $cart_index = 0;  // the cart line item #
 for (; $cart_index < count($_SESSION["cart"]); $cart_index++) {
     echo "cart line item " . $cart_index . ":<br>";
-    // echo "_SESSION[cart]: <br>";
-    // print_R($_SESSION);
     echo "cart line item details:";
     echo "<br>";
     print_r($_SESSION["cart"][$cart_index]);

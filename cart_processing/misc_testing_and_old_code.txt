@@ -64,3 +64,9 @@
 
     echo "other line item quantity total is: " . $other_line_item_quantity_total;
     echo "<br><br>";
+
+
+    // echo "in the else block - brand new cart item is being worked on <br><br>";
+
+
+            // $new_cart_item_number = count($_SESSION["cart"]) + 1;
