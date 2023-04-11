@@ -1,0 +1,18 @@
+work on prepared statements
+
+$stmt = $conn->prepare("SELECT $info FROM inventory_items WHERE Item_ID = $id");
+    $stmt->bind_param("si", $info, $id);
+
+    $item_info_array = [
+        $id => 'Item_Name',
+        $id => 'Item_Unit_Price',
+        $id => 'Type_of_Item',
+        $id => 'Item_Description'
+    ];
+
+    foreach ($item_info_array as $id => $info) {
+        $stmt->execute();
+    }
+
+    $result = $conn->query('SELECT info FROM inventory_items WHERE Item_ID = id');
+    var_dump($result->fetch_all(MYSQLI_ASSOC));

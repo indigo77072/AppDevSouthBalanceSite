@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 $servername = "vdi-sopadb-p40";
 $username = "student";
 $password = "SoPAStudentDB!#!";

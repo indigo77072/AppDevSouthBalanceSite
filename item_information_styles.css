@@ -51,7 +51,10 @@ div#upperRightSection {
 
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
+
+    /* TODO: NOTE: this belwo line was causing the item description text to not show up (only the price), so it's commented out */
+    /* transform: translateY(-50%); */
+
     /* background-color: lime; */
     height: 100%;
 
@@ -90,6 +93,50 @@ p#briefItemInfo {
     /* text-align: center; */
     /* background-color: yellow; */
 
+
+
+    /* overflow-wrap: break-word; */
+    /* background-color: green; */
+
+    /* overflow-x: auto; */
+
+    white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+
+}
+
+div#middleSection {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    /* background-color: green; */
+
+    overflow-wrap: break-word;
+    /* background-color: green; */
+
+    overflow-x: auto;
+
+    white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+
+}
+
+p#itemDescription {
+    overflow-wrap: break-word;
+    /* background-color: green; */
+
+    overflow-x: auto;
+
+    white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
 }
 
 div#lowerSection {

@@ -1,48 +1,11 @@
-<!--
-    SB Item Information page
-    Author: Will
-    Filename: item_information.php
--->
-
-<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8"></meta>
-        <link rel="stylesheet" href="header_styles.css">
-        <link rel="stylesheet" href="item_information_styles.css">
-        <!-- <link rel="stylesheet" href="logout_styles.css"> -->
-        <title>South Balance - Item Information</title>
-    </head>
-    <body>
 
+<body>
+<!-- This script tests update_cart.php. The actual code which is tested will vary based on how far along I am in the coding process.
+Author: Will
+Date created: 4/8/23 -->
 
-    <?php
-        include('database.php');
-        include('get_item_information_process.php');
-
-        // $item_name, $item_unit_price, and $product_img_path, $item_description and $item_color can now be used.
-    ?>
-        <?php include 'header.php'; ?>
-        
-        <!-- TODO: change the below to code for item information -->
-        <div id="upperSection">
-        <div id="upperLeftSection">
-                <img src="<?php echo $product_img_path;?>" id="water bottle" alt="Product image">
-            </div><div id="upperRightSection">
-                <p id="briefItemInfo"><?php echo $inventory_items_item_name;?> <br>
-                $<?php echo $inventory_items_item_unit_price;?>
-                </p>
-                <!-- getItemName, getItemPrice -->
-            </div><div id="middleSection">
-                
-                <?php echo $inventory_items_item_description; ?>
-
-                <!-- </p> -->
-
-            </div><div id="lowerSection"><div id="lowerLeftSection">
-
-                <!-- select military branch & radio options TODO: include none option -->
-            <form action="add_to_cart_process.php" method="post">
+<form action="update_cart.php" method="post">
 
                 <!-- the following is a hiden field, necessary to pass the item_id to the add_to_cart_process.php -->
                 <input type="hidden" name="item_id" id="item_id" value="<?php echo $_GET['item_id'];?>" />
@@ -98,13 +61,11 @@
 
                 <br>
                 <label for="quantity">Select quantity:</label>
-                <input type="number" id="quantity" name="quantity" min="1" max="100">
+                <input type="number" id="quantity" name="quantity" min="1">
                 <br><br>
                 <input type="submit" value="Add to cart">
             </form>
-            </div></div>
 
-        
+
 </body>
-
 </html>
