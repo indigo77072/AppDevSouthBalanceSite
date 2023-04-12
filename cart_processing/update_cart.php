@@ -74,6 +74,8 @@ for (; $cart_index < count($_SESSION["cart"]); $cart_index++) {
     echo "<br><br>";
 }
 
+echo "too many items requested: " . $_SESSION["quantity_requested_is_too_high"];
+
 ?>
 
 <html>
