@@ -4,7 +4,7 @@ Author: Will
 Date created: 4/8/23 */
 
 // probably via POST, maybe SESSION, get the cart_line_item_number to delete.
-$cart_line_item_num_to_del = null;
+$cart_line_item_num_to_del = $_SESSION["cart_line_item_num"];
 
 // loop through the cart, searching for hte desired cart_lien_item_number.
 

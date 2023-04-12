@@ -5,10 +5,15 @@
 Author: Will
 Date created: 4/8/23 -->
 
-<form action="update_cart.php" method="post">
+<!-- <form action="update_cart.php" method="post"> -->
+<form action="add_to_cart_process.php" method="post">
 
-                <!-- the following is a hiden field, necessary to pass the item_id to the add_to_cart_process.php -->
+                
+                <!-- the following is a hidden field, necessary to pass the item_id to the add_to_cart_process.php -->
                 <input type="hidden" name="item_id" id="item_id" value="<?php echo $_GET['item_id'];?>" />
+
+                <!-- the following is a hidden field, necessary to pass the action mode to the add_to_cart_process.php -->
+                <!-- <input type="hidden" name="action" id="action" value="<?php echo $_POST['action'];?>" /> -->
 
                 <div id="customization">
                     Select Customization<br><br>
