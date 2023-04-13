@@ -57,7 +57,7 @@ function get_item_id_from_item_color($input_item_id, $color) {
             return $blue_item_id;
         }
         return $green_item_id;
-    }
-    
+    }   
 }
+
 ?>

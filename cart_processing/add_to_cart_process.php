@@ -5,19 +5,12 @@ Date created: 4/8/23 */
 
 include '../database.php';  // start session and connect to DB
 
+
 // Will edited this code which Indigo wrote.
-// if (isset($_SESSION["new_item_info_from_user"]["item_id"])) {
-//     $item_id = $_SESSION["new_item_info_from_user"]["item_id"];
-//     echo "initial item_id: " . $item_id . " is set.";
-// }
-
-
 if (isset($_POST["item_id"])) {
     $item_id = $_POST["item_id"];
     echo "initial item_id: " . $item_id . " is set.";
 }
-
-
 
 include 'item_id_validation.php';
 

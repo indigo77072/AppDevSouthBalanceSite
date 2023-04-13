@@ -73,6 +73,16 @@
 
 
 
+
+
+
+// if (isset($_SESSION["new_item_info_from_user"]["item_id"])) {
+//     $item_id = $_SESSION["new_item_info_from_user"]["item_id"];
+//     echo "initial item_id: " . $item_id . " is set.";
+// }
+
+
+
 ===================================================================================================
 OLD add_to_cart_process.php below
 
