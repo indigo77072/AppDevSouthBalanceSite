@@ -1,5 +1,8 @@
 <?php
-/* This script performs logic to update the cart contents (via either add or delete).
+/* 
+NOT IN USE as of 4/12 afternoon.
+
+This script performs logic to update the cart contents (via either add or delete).
 Author: Will
 Date created: 4/12/23 */
 

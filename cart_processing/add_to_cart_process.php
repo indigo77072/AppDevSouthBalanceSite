@@ -91,7 +91,7 @@ echo "too many items requested: " . $_SESSION["quantity_requested_is_too_high"];
 
 <html>
 <body>
-    <a href="test_update_cart.php?item_id=1">Go back to the test-update-cart page</a>
+    <a href="test_add_to_cart_process.php?item_id=1">Go back to the test-update-cart page</a>
 
 </body>
 
