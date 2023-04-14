@@ -5,11 +5,17 @@ Date created: 4/8/23 */
 
 include '../database.php';  // start session and connect to DB
 
+$item_from_catalog = false;
 
 // Will edited this code which Indigo wrote.
 if (isset($_POST["item_id"])) {
     $item_id = $_POST["item_id"];
     echo "initial item_id: " . $item_id . " is set.";
+
+} else if (isset($_GET["item_id"])) {
+    $item_id = $_GET["item_id"];
+    echo "initial item_id: " . $item_id . " is set.";
+    $item_from_catalog = true;
 }
 
 include 'item_id_validation.php';
@@ -23,7 +29,7 @@ if (!is_valid_item_id($item_id)) {
 }
 include 'create_potential_cart_line_item.php';
 $correct_item_id = get_item_id_from_item_color($item_id, $color_choice);  // the item id that is correct for a given color.
-$potential_cart_line_item = create_potential_cart_line_item($correct_item_id);
+$potential_cart_line_item = create_potential_cart_line_item($correct_item_id, $item_from_catalog);
 
 include 'determine_if_cart_line_item_exists.php';
 $potential_cart_line_item_exists = determine_if_cart_line_item_exists($potential_cart_line_item);
