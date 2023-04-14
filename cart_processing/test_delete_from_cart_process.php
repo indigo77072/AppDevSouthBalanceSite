@@ -2,14 +2,23 @@
 session_start();
 
 echo "Cart contents:<br><br>";
-$cart_index = 0;  // the cart line item #
-for (; $cart_index < count($_SESSION["cart"]); $cart_index++) {
-    echo "cart line item " . $cart_index . ":<br>";
+
+foreach ($_SESSION["cart"] as $cart_line_item_num => $cart_line_item) {
+    echo "cart line item " . $cart_line_item_num . ":<br>";
     echo "cart line item details:";
     echo "<br>";
-    print_r($_SESSION["cart"][$cart_index]);
-    echo "<br><br>";
+    print_r($cart_line_item);
+    echo "<br><br>";   
 }
+
+// $cart_index = 0;  // the cart line item #
+// for (; $cart_index < count($_SESSION["cart"]); $cart_index++) {
+//     echo "cart line item " . $cart_index . ":<br>";
+//     echo "cart line item details:";
+//     echo "<br>";
+//     print_r($_SESSION["cart"][$cart_index]);
+//     echo "<br><br>";
+// }
 
 ?>
 <html>
@@ -22,7 +31,7 @@ for (; $cart_index < count($_SESSION["cart"]); $cart_index++) {
 
 
 <label for="quantity">Select line item to delete:</label>
-    <input type="number" id="line_item_num" name="line_item_num" min="1">
+    <input type="number" id="line_item_num" name="line_item_num" min="0">
     <br><br>
     <input type="submit" value="Delete from cart">
 
