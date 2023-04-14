@@ -28,7 +28,11 @@ session_start();
 
         <?php include 'header.php'; ?>
         <!-- <div class="flex-container"> -->
-
+        
+        <div class="pageTitle">
+        <h2>Shopping Cart</h2>
+        </div>
+        
         <?php
         
         include "cart_processing/render_cart_content.php";
@@ -37,9 +41,15 @@ session_start();
         if (isset($_SESSION["cart"])) {
             $num_cart_items = count($_SESSION["cart"]);
         }
-
+        if ($_SESSION["quantity_requested_is_too_high"] && $num_cart_items > 0) {
+            echo "<div class=\"topOfPageNotifications\"><strong>You selected a quantity that is higher than what we have in stock.
+            The quantity listed below is the entire quantity available.</strong></div><br><br>";
+        }
+        if ($num_cart_items == 0) {
+            echo "<div class=\"topOfPageNotifications\"><strong>There are no items in the cart.</strong></div>";
+        }
         if ($num_cart_items > 0) {
-            display_topmost_cart_info();
+            display_topmost_cart_content();
         }
         if ($num_cart_items > 1) {
             display_additional_cart_line_items();

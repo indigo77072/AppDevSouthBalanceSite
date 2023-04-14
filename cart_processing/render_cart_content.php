@@ -16,7 +16,10 @@ function display_cart_line_item($line_item_indx) {
     . "Quantity: " . get_item_quantity($line_item_indx) . "<br>"
     . "Price: " . get_item_price($line_item_indx)
     
-    . "<div class=\"deleteIconSection\"><img src=\"graphics/trash.bmp\" class=\"deleteIcon\"></div>
+    . "<div class=\"deleteIconSection\"><br><br>
+    <a href=\"cart_processing/delete_from_cart_process.php?cart_line_item_num=$line_item_indx\">
+        <img src=\"graphics/trash.bmp\" class=\"deleteIcon\"></div>
+        </a>
     </div></div>";
     
 }
@@ -41,7 +44,7 @@ function display_place_order_box() {
 }
 
 // Display the first cart line item info (on the left) and the place-order box (on the right).
-function display_topmost_cart_info() {
+function display_topmost_cart_content() {
     echo "<div class=\"flex-container\">";
     display_first_cart_line_item(get_first_line_item_indx());
 

@@ -68,15 +68,17 @@ if ($potential_cart_line_item_exists) {
 
 }
 
-echo "Cart contents:<br><br>";
+header("Location: ../cart.php");
 
-foreach ($_SESSION["cart"] as $cart_line_item_num => $cart_line_item) {
-    echo "cart line item " . $cart_line_item_num . ":<br>";
-    echo "cart line item details:";
-    echo "<br>";
-    print_r($cart_line_item);
-    echo "<br><br>";   
-}
+// echo "Cart contents:<br><br>";
+
+// foreach ($_SESSION["cart"] as $cart_line_item_num => $cart_line_item) {
+//     echo "cart line item " . $cart_line_item_num . ":<br>";
+//     echo "cart line item details:";
+//     echo "<br>";
+//     print_r($cart_line_item);
+//     echo "<br><br>";   
+// }
 
 // $cart_index = 0;  // the cart line item #
 // for (; $cart_index < count($_SESSION["cart"]); $cart_index++) {
@@ -93,7 +95,7 @@ echo "too many items requested: " . $_SESSION["quantity_requested_is_too_high"];
 
 <html>
 <body>
-    <a href="test_add_to_cart_process.php?item_id=1">Go back to the test-update-cart page</a>
+    <!-- <a href="test_add_to_cart_process.php?item_id=1">Go back to the test-update-cart page</a> -->
 
 </body>
 

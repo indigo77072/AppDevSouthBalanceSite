@@ -17,15 +17,19 @@ foreach ($_SESSION["cart"] as $key => $val) {
     }
 }
 
+// TODO: header to the cart pg rather than this cart display list.
+
+header("Location: ../cart.php");
+
 // display updated cart line items.
-echo "Cart contents:<br><br>";
-foreach ($_SESSION["cart"] as $line_item_num => $cart_line_item) {
-    echo "cart line item " . $line_item_num . ":<br>";
-    echo "cart line item details:";
-    echo "<br>";
-    print_r($cart_line_item);
-    echo "<br><br>";
-}
+// echo "Cart contents:<br><br>";
+// foreach ($_SESSION["cart"] as $line_item_num => $cart_line_item) {
+//     echo "cart line item " . $line_item_num . ":<br>";
+//     echo "cart line item details:";
+//     echo "<br>";
+//     print_r($cart_line_item);
+//     echo "<br><br>";
+// }
 
 
 ?>
