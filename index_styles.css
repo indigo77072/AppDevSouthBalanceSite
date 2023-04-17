@@ -25,19 +25,33 @@ p {
     text-align: left;
 }
 
-div#featuredItems {
+#featuredItems {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .item {
-  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(50% - 20px);
+  margin-bottom: 20px;
   border: 1px solid black;
-  width: 300px;
-  height: 400px;
-  text-align: center;
-  flex-basis: calc(50% - 20px);
+  padding: 10px;
 }
 
 .itemImage {
