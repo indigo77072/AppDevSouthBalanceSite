@@ -23,12 +23,22 @@ h1 {
   text-align: center;
 }
 
+.left-image, .right-image {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .left-image {
+  top: 0;
   left: 0;
   background-image: url("graphics/sb_logo.png");
 }
 
 .right-image {
+  top: 0;
   right: 0;
   background-image: url("graphics/sb_logo.png");
 }
