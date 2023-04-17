@@ -22,7 +22,7 @@ if(isset($_GET["msg2"])){
 <html>
 
 <head>
-  <title>South Balance Online Store - Login Page</title>
+  <h1><span class="title">South Balance Online Store</span> Login</h1>
   <link rel="stylesheet" href="login_styles.css">
 </head>
 
