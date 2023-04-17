@@ -19,9 +19,6 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
 
 <?php include 'header.php' ?>
 
-  <div id="searchBar">
-    <input type="text" id="search" placeholder="Search">
-</div>
 <div id="bodyText"><p>Radically Conscious. Obsessively Chill. Fanatically Zen.</p><br>
 <p class="bodyContent">Here at South Balance, we do “slowing down” differently. What started as a New Orleans-based mom-and-pop
   retail operation has bloomed into one of the most popular and innovative suppliers of premium yoga mats
