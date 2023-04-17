@@ -30,7 +30,7 @@ if(isset($_GET["msg2"])){
 <body>
   <h1 class="title">South Balance Online Store</h1>
   <div class="loginbox">
-    <h1>Login</h1>
+    <h2>Login</h1>
     <form method="POST" action="login_Process.php">
       <p>Username</p>
       <input type="text" name="username" placeholder="Enter Username" >
