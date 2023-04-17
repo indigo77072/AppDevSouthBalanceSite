@@ -30,39 +30,36 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
   browse our site, explore our products, and picture yourself #fanaticallyzen.</p>
 </div>
 
- <div id="featuredItems">
+<div id="featuredItems">
         <div class="item">
             <div class="itemImage">
                 <img id="test_wb" src="product_images/test_wb.png">
             </div>
-                <button>Add to Cart</button>
-            </div>
+            <button>Add to Cart</button>
         </div>
 
         <div class="item">
             <div class="itemImage">
                 <img id="test_wb" src="product_images/test_wb.png">
             </div>
-                <button>Add to Cart</button>
-            </div>
+            <button>Add to Cart</button>
         </div>
 
         <div class="item">
             <div class="itemImage">
                 <img id="test_wb" src="product_images/test_wb.png">
             </div>
-                <button>Add to Cart</button>
-            </div>
+            <button>Add to Cart</button>
         </div>
 
         <div class="item">
             <div class="itemImage">
                 <img id="test_wb" src="product_images/test_wb.png">
             </div>
-                <button>Add to Cart</button>
-            </div>
+            <button>Add to Cart</button>
         </div>
     </div>
+
 
     <footer>
         <p>© 2023 Copyright & Powered By 
