@@ -23,6 +23,11 @@ h1 {
   text-align: center;
 }
 
+.SignIn {
+  color: #fff;
+}
+
+
 /* Inside loginbox */
 .loginbox {
   width: 320px;
