@@ -16,10 +16,10 @@ body {
 
 .title {
   display: block;
-  margin-bottom: 20px;
+  margin: 20px auto;
   font-size: 32px;
   font-weight: bold;
-  color: white;
+  color: #fff;
   text-align: center;
 }
 
