@@ -30,7 +30,7 @@ if(isset($_GET["msg2"])){
 <body>
   <div class="left-image"></div>
   <div class="right-image"></div>
-  <h1 class="title"><span class="SignIn">Sign In</span> To The South Balance Online Store</h1>
+  <h1>Sign In To The South Balance Online Store</h1>
   <div class="loginbox">
     <h2>Login</h2>
     <form method="POST" action="login_Process.php">
