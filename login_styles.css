@@ -23,6 +23,16 @@ h1 {
   text-align: center;
 }
 
+.left-image {
+  left: 0;
+  background-image: url("graphics/sb_logo.png");
+}
+
+.right-image {
+  right: 0;
+  background-image: url("graphics/sb_logo.png");
+}
+
 .SignIn {
   color: #418fde;
 }
