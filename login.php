@@ -22,12 +22,13 @@ if(isset($_GET["msg2"])){
 <html>
 
 <head>
-  <h1 class="title">South Balance Online Store</h1>
+  <title>Login Page</title>
   <link rel="stylesheet" href="login_styles.css">
 </head>
 
 
 <body>
+  <h1 class="title">South Balance Online Store</h1>
   <div class="loginbox">
     <h1>Login</h1>
     <form method="POST" action="login_Process.php">
