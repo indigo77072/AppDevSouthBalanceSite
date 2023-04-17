@@ -31,34 +31,35 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
 </div>
 
 <div id="featuredItems">
-        <div class="item">
-            <div class="itemImage">
-                <img id="test_wb" src="product_images/test_wb.png">
-            </div>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="item">
-            <div class="itemImage">
-                <img id="test_wb" src="product_images/test_wb.png">
-            </div>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="item">
-            <div class="itemImage">
-                <img id="test_wb" src="product_images/test_wb.png">
-            </div>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="item">
-            <div class="itemImage">
-                <img id="test_wb" src="product_images/test_wb.png">
-            </div>
-            <button>Add to Cart</button>
-        </div>
+  <div class="row">
+    <div class="item">
+      <div class="itemImage">
+        <img id="test_wb" src="product_images/test_wb.png">
+      </div>
+      <button>Add to Cart</button>
     </div>
+    <div class="item">
+      <div class="itemImage">
+        <img id="test_wb" src="product_images/test_wb.png">
+      </div>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="item">
+      <div class="itemImage">
+        <img id="test_wb" src="product_images/test_wb.png">
+      </div>
+      <button>Add to Cart</button>
+    </div>
+    <div class="item">
+      <div class="itemImage">
+        <img id="test_wb" src="product_images/test_wb.png">
+      </div>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+</div>
 
 
     <footer>
