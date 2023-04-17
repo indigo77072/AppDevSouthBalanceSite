@@ -14,7 +14,7 @@ body {
   font-family: sans-serif;
 }
 
-.title {
+h1 {
   display: block;
   margin: 50px auto 30px;
   font-size: 32px;
@@ -34,7 +34,7 @@ body {
   position: absolute;
   transform: translate(-50%,-50%);
   box-sizing: border-box;
-  padding: 70px 30px 40px;
+  padding: 70px 30px;
 }
 
 h2 {
