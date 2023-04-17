@@ -43,11 +43,6 @@ h1 {
   background-image: url("graphics/sb_logo.png");
 }
 
-.SignIn {
-  color: #418fde;
-}
-
-
 /* Inside loginbox */
 .loginbox {
   width: 320px;
