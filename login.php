@@ -28,7 +28,7 @@ if(isset($_GET["msg2"])){
 
 
 <body>
-  <h1 class="title">South Balance Online Store</h1>
+  <h1 class="title">Welcome To South Balance Online Store</h1>
   <div class="loginbox">
     <h2>Login</h1>
     <form method="POST" action="login_Process.php">
