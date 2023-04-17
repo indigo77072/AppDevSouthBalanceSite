@@ -28,6 +28,7 @@ p {
 div#featuredItems {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .item {
@@ -36,6 +37,7 @@ div#featuredItems {
   width: 300px;
   height: 400px;
   text-align: center;
+  flex-basis: calc(50% - 20px);
 }
 
 .itemImage {
