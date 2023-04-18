@@ -37,12 +37,6 @@ h1 {
   background-image: url("graphics/sb_logo.png");
 }
 
-.right-image {
-  top: 0;
-  right: 0;
-  background-image: url("graphics/sb_logo.png");
-}
-
 /* Inside loginbox */
 .loginbox {
   width: 320px;
