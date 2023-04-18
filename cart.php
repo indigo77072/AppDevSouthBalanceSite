@@ -37,14 +37,19 @@ session_start();
         
         include "cart_processing/render_cart_content.php";
         
+        // get the num of cart items
         $num_cart_items = 0;
         if (isset($_SESSION["cart"])) {
             $num_cart_items = count($_SESSION["cart"]);
         }
+        
+        // deal w/ too high quantity requested
         if ($_SESSION["quantity_requested_is_too_high"] && $num_cart_items > 0) {
             echo "<div class=\"topOfPageNotifications\"><strong>You selected a quantity that is higher than what we have in stock.
             The quantity listed below is the entire quantity available.</strong></div><br><br>";
         }
+        
+        // display any existing cart line items
         if ($num_cart_items == 0) {
             echo "<div class=\"topOfPageNotifications\"><strong>There are no items in the cart.</strong></div>";
         }

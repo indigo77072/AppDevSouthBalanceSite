@@ -1,10 +1,11 @@
 <?php
-/* This script performs logic to display cart items.
+/* This script performs logic to display cart items in cart.php
 Author: Will
 Date created: 4/13/23 */
 
 include 'get_cart_line_items_info.php';
 
+// display details for a cart lien item, given by its inputted index.
 function display_cart_line_item($line_item_indx) {
     echo "<div class=\"leftColumn\">
     <img src=\"graphics/item_placeHolder.png\">
@@ -24,6 +25,7 @@ function display_cart_line_item($line_item_indx) {
     
 }
 
+// display the box to place the order.
 function display_place_order_box() {
     echo "<div class=\"rightColumn\">
         <form class=\"shippingConfig\" action=\"/place_order_page.php\">
@@ -52,12 +54,14 @@ function display_topmost_cart_content() {
     echo "</div>";    
 }
 
+// helper function to get the first lien item's index.
 function get_first_line_item_indx() {
     foreach ($_SESSION["cart"] as $line_item_indx => $val) {
         return $line_item_indx;
     }
 }
 
+// dispaly the first cart line item
 function display_first_cart_line_item($first_line_item_indx) {
 
     display_cart_line_item($first_line_item_indx);

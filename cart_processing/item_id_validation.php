@@ -3,6 +3,7 @@
 Author: Will
 Date created: 4/8/23 */
 
+// an array of all the possible item id's
 // sub-arrays: index 0 is a blue item, index 1 a green one.
 $item_id_and_color_array = array (
     array(1, 25),
@@ -18,6 +19,7 @@ $item_id_and_color_array = array (
     array(17, 15)
 );
 
+// determien if an inputted id is possible
 function is_valid_item_id($item_id) {
     global $item_id_and_color_array;
 

@@ -3,7 +3,7 @@
 Author: Will
 Date created: 4/10/23 */
 
-
+// Finalize the quantity for a cart line item.
 // copy by value/reference might be especially important for this fncn
 // 4/10, 6:06pm: Trying this with pass-by-value ("default")
 function get_final_cart_line_item($potential_cart_line_item, $quantity_to_order) {

@@ -1,7 +1,7 @@
 <html>
 
 <body>
-<!-- This script tests update_cart.php. The actual code which is tested will vary based on how far along I am in the coding process.
+<!-- This script is for testing add_to_cart_process.php.
 Author: Will
 Date created: 4/8/23 -->
 

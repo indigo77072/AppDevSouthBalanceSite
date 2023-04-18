@@ -42,7 +42,7 @@ function determine_if_cart_line_item_exists($target_cart_line_item) {
     $working_item_id = $target_cart_line_item["item_id"];
     $working_customization = $target_cart_line_item["customization"];
     
-    foreach ($_SESSION["cart"] as $cart_line_item) {
+    foreach ($_SESSION["cart"] as $cart_line_item) {  // go through the cart, looking for an existing cart line item.
         if ($cart_line_item["item_id"] == $working_item_id
             && $cart_line_item["customization"] == $working_customization) {
                     $cart_line_item_already_exists = true;

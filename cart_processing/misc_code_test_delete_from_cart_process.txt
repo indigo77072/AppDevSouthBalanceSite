@@ -1,3 +1,6 @@
+Miscellaneous old code from delete from cart delete_from_cart_process
+=====================================================================================   
+   
    <!-- the following is a hidden field, necessary to pass the cart line item number to the delete_from_cart_process.php -->
 <!-- <input type="hidden" name="cart_line_item_num" id="cart_line_item_num" value="<?php echo $_GET['line_item_num'];?>" /> -->
 

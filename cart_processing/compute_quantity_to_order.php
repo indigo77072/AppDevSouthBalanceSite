@@ -8,6 +8,7 @@ Date created: 4/9/23 */
 
 $_SESSION["quantity_requested_is_too_high"] = false;
 
+// get the quantity available from teh database for an input item_id
 function get_quantity_from_db($item_id) {
     global $conn;
     $item_quantity_query = "SELECT Quantity FROM inventory_items WHERE Item_ID = $item_id";
@@ -16,6 +17,7 @@ function get_quantity_from_db($item_id) {
     return $row["Quantity"];
 }
 
+// calculate the quantity to order, based on the app requirements in South Balance module
 function compute_quantity_to_order($item_id, $quantity_requested) {
     // here, item_id should be a valid item_id.
 

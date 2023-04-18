@@ -1,3 +1,7 @@
+<!-- This script is for testing delete_from_cart_process.php.
+Author: Will
+Date created: 4/8/23 -->
+
 <?php
 session_start();
 

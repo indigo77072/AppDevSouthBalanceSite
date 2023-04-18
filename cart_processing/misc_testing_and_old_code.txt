@@ -1,3 +1,9 @@
+Miscellaneous old & testing code from the project
+=====================================================================================  
+
+
+
+
 ///test
 // echo "Cart contents:<br><br>";
 // $cart_index = 0;  // the cart line item #

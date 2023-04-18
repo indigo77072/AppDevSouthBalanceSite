@@ -27,13 +27,17 @@ if (!is_valid_item_id($item_id)) {
     echo "App Dev custom error: not a valid item_id <br>"; 
 
 }
+
+// set up a cart line item, with initial information
 include 'create_potential_cart_line_item.php';
 $correct_item_id = get_item_id_from_item_color($item_id, $color_choice);  // the item id that is correct for a given color.
 $potential_cart_line_item = create_potential_cart_line_item($correct_item_id, $item_from_catalog);
 
+// see whether there is already a cart line item with the same details as the potential one
 include 'determine_if_cart_line_item_exists.php';
 $potential_cart_line_item_exists = determine_if_cart_line_item_exists($potential_cart_line_item);
 
+// if applicable, find the index of the existing cart line item
 $existing_cart_line_item_index = null;
 if ($potential_cart_line_item_exists) {
     $existing_cart_line_item_index = get_existing_cart_line_item_index($potential_cart_line_item);
@@ -42,14 +46,18 @@ if ($potential_cart_line_item_exists) {
 // Here, either 1 of 2 things are true: either 1) $potential_cart_line_item is a new itemID/customiztation combo,
 // or 2) $potential_cart_line_item matches an existing cart line item, whose number is $existing_cart_line_item_number
 
+// processing to determine the quantity requested, and to order (of a given cart line item)
 include 'compute_quantity_requested.php';
 $quantity_requested = compute_quantity_requested($potential_cart_line_item);
 
 include 'compute_quantity_to_order.php';
 $quantity_to_order = compute_quantity_to_order($correct_item_id, $quantity_requested);
 
+
+// update the cart array to include the new item information
 include 'finalize_cart_line_item.php';
 
+// this branch is for a cart line item that already exists
 if ($potential_cart_line_item_exists) {
     include 'compute_other_line_item_quantity.php';
     $other_line_item_quantity_total
@@ -60,11 +68,13 @@ if ($potential_cart_line_item_exists) {
     // update the cart
     $_SESSION["cart"][$existing_cart_line_item_index]["quantity"] = $new_quantity;
 
+// This branch is for brand-new cart line items.
 } else {
     // finalize the potential cart line item
     $finalized_cart_line_item = get_final_cart_line_item($potential_cart_line_item, $quantity_to_order);
 
     // store teh finalized line item in the cart
+    // TODO: this needs fixing
     if (!isset($_SESSION["cart"])) {
         $new_cart_item_indx = 0;
     } else {
@@ -95,7 +105,7 @@ header("Location: ../cart.php");
 //     echo "<br><br>";
 // }
 
-echo "too many items requested: " . $_SESSION["quantity_requested_is_too_high"];
+// echo "too many items requested: " . $_SESSION["quantity_requested_is_too_high"];
 
 ?>
 
