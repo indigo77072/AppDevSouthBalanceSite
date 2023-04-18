@@ -42,7 +42,7 @@
             </div><div id="lowerSection"><div id="lowerLeftSection">
 
                 <!-- select military branch & radio options TODO: include none option -->
-            <form action="add_to_cart_process.php" method="post">
+            <form action="cart_processing/add_to_cart_process.php" method="post">
 
                 <!-- the following is a hiden field, necessary to pass the item_id to the add_to_cart_process.php -->
                 <input type="hidden" name="item_id" id="item_id" value="<?php echo $_GET['item_id'];?>" />
@@ -98,7 +98,7 @@
 
                 <br>
                 <label for="quantity">Select quantity:</label>
-                <input type="number" id="quantity" name="quantity" min="1" max="100">
+                <input type="number" id="quantity" name="quantity" min="1">
                 <br><br>
                 <input type="submit" value="Add to cart">
             </form>

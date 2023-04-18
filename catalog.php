@@ -130,7 +130,7 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
                         echo $row['Item_Size'];
 						?>
               </p>
-         <a class="btn btn-primary" href="add_to_cart_process.php?item_id=<?php echo $row['Item_ID'];?>"><strong>+</strong></a>
+         <a class="btn btn-primary" href="cart_processing/add_to_cart_process.php?item_id=<?php echo $row['Item_ID'];?>"><strong>+</strong></a>
      </div>
   </div>
     </div>

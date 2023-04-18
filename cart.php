@@ -21,12 +21,45 @@ session_start();
 
         <?php
 
-            $specificColor1 = $_SESSION["cart"]["testColorChoice"];
-            $specificQuantity1 = $_SESSION["cart"]["testQuantity"];
+            // TODO: tend to this
+            // $specificColor1 = $_SESSION["cart"]["testColorChoice"];
+            // $specificQuantity1 = $_SESSION["cart"]["testQuantity"];
         ?>                                                           
 
         <?php include 'header.php'; ?>
-        <div class="flex-container">
+        <!-- <div class="flex-container"> -->
+        
+        <div class="pageTitle">
+        <h2>Shopping Cart</h2>
+        </div>
+        
+        <?php
+        
+        include "cart_processing/render_cart_content.php";
+        
+        $num_cart_items = 0;
+        if (isset($_SESSION["cart"])) {
+            $num_cart_items = count($_SESSION["cart"]);
+        }
+        if ($_SESSION["quantity_requested_is_too_high"] && $num_cart_items > 0) {
+            echo "<div class=\"topOfPageNotifications\"><strong>You selected a quantity that is higher than what we have in stock.
+            The quantity listed below is the entire quantity available.</strong></div><br><br>";
+        }
+        if ($num_cart_items == 0) {
+            echo "<div class=\"topOfPageNotifications\"><strong>There are no items in the cart.</strong></div>";
+        }
+        if ($num_cart_items > 0) {
+            display_topmost_cart_content();
+        }
+        if ($num_cart_items > 1) {
+            display_additional_cart_line_items();
+        }
+        
+
+        
+        ?>
+
+
     
         
 
@@ -34,7 +67,7 @@ session_start();
 
 
 
-        <?php include 'cart_line_item.php'; ?>
+        <!-- <php include 'cart_line_item.php'; ?>
 
 
 
@@ -55,26 +88,23 @@ session_start();
                 <div class="proceedToCheckoutDiv"><input type="submit" value="Proceed to checkout"></div>
             </form>
             </div>
-        </div>
+        </div> -->
 
-        <hr class="itemDivider">
-        <!------------------ separation between 1st and 2nd cart items ------------->
+        <!-- <hr class="itemDivider">
+        ---------------- separation between 1st and 2nd cart items ------------->
 
-        <?php
-        // for each cart line item, display it and its details in this document. (1 item section per line item.)
-
-        ?>
-        <div class="flex-container">
+        
+        <!-- <div class="flex-container"> -->
     
         
-        <?php include 'cart_line_item.php'; ?>
+        <!-- <php include 'cart_line_item.php'; ?>
 
-        <?php include 'cart_line_item_spacing.php'; ?>
+        <php include 'cart_line_item_spacing.php'; ?> -->
         
 
 
 
-</div>
+<!-- </div>
 
 
         <hr class="itemDivider">
@@ -82,8 +112,8 @@ session_start();
         <div class="flex-container">
 
 
-        <?php include 'cart_line_item.php'; ?>
-        <?php include 'cart_line_item_spacing.php'; ?>
+        <php include 'cart_line_item.php'; ?>
+        <php include 'cart_line_item_spacing.php'; ?>
 
 
         </div>
@@ -95,8 +125,8 @@ session_start();
         <div class="flex-container">
 
 
-        <?php include 'cart_line_item.php'; ?>
-        <?php include 'cart_line_item_spacing.php'; ?>
+        <php include 'cart_line_item.php'; ?>
+        <php include 'cart_line_item_spacing.php'; ?>
 
 
         </div>
@@ -108,11 +138,11 @@ session_start();
         <div class="flex-container">
 
 
-        <?php include 'cart_line_item.php'; ?>
-        <?php include 'cart_line_item_spacing.php'; ?>
+        <php include 'cart_line_item.php'; ?>
+        <php include 'cart_line_item_spacing.php'; ?>
 
 
-        </div>
+        </div> -->
         <!-- </div> -->
         
         

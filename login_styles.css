@@ -14,6 +14,35 @@ body {
   font-family: sans-serif;
 }
 
+h1 {
+  display: block;
+  margin: 90px auto 30px;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.left-image, .right-image {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.left-image {
+  top: 0;
+  left: 0;
+  background-image: url("graphics/sb_logo.png");
+}
+
+.right-image {
+  top: 0;
+  right: 0;
+  background-image: url("graphics/sb_logo.png");
+}
+
 /* Inside loginbox */
 .loginbox {
   width: 320px;
@@ -28,7 +57,7 @@ body {
   padding: 70px 30px;
 }
 
-h1 {
+h2 {
   margin: 0;
   padding: 0 0 20px;
   text-align: center;

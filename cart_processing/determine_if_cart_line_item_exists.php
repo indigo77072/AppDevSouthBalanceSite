@@ -31,7 +31,7 @@ Date created: 4/8/23 */
 
 // Determine whether the details of an input line item match those details of an existing line item.
 // we want this to return false if nothing was in the cart/new cart.
-function determine_if_cart_line_item_exists($cart_line_item) {
+function determine_if_cart_line_item_exists($target_cart_line_item) {
 
     $cart_line_item_already_exists = false;
 
@@ -39,35 +39,49 @@ function determine_if_cart_line_item_exists($cart_line_item) {
     if (!isset($_SESSION["cart"])) {
         return false;
     }
-    $working_item_id = $cart_line_item["item_id"];
-    $working_customization = $cart_line_item["customization"];
+    $working_item_id = $target_cart_line_item["item_id"];
+    $working_customization = $target_cart_line_item["customization"];
     
-        for ($counter = 0; $counter < count($_SESSION["cart"]) && !$cart_line_item_already_exists; $counter++) {
-
-            if ($_SESSION["cart"][$counter]["item_id"] == $working_item_id
-                && $_SESSION["cart"][$counter]["customization"] == $working_customization) {
+    foreach ($_SESSION["cart"] as $cart_line_item) {
+        if ($cart_line_item["item_id"] == $working_item_id
+            && $cart_line_item["customization"] == $working_customization) {
                     $cart_line_item_already_exists = true;
                 }
-        }
-        return $cart_line_item_already_exists;
+    }
+        // for ($counter = 0; $counter < count($_SESSION["cart"]) && !$cart_line_item_already_exists; $counter++) {
+
+        //     if ($_SESSION["cart"][$counter]["item_id"] == $working_item_id
+        //         && $_SESSION["cart"][$counter]["customization"] == $working_customization) {
+        //             $cart_line_item_already_exists = true;
+        //         }
+        // }
+    return $cart_line_item_already_exists;
 }
 
 // This input cart lien item is the one which is being updated. (it's not a totally new cart line item).
 // note: Will thinks this doesn't need a !isset check for the cart vairable.
-function get_existing_cart_line_item_number($cart_line_item) {
+function get_existing_cart_line_item_index($cart_line_item) {
 
     $matching_line_item_index = null; 
 
     $working_item_id = $cart_line_item["item_id"];
     $working_customization = $cart_line_item["customization"];
 
-    for ($counter = 0; $counter < count($_SESSION["cart"]); $counter++) {
-
-        if ($_SESSION["cart"][$counter]["item_id"] == $working_item_id
-            && $_SESSION["cart"][$counter]["customization"] == $working_customization) {
-                $matching_line_item_index = $counter;
+    foreach ($_SESSION["cart"] as $cart_line_item_indx => $cart_line_item) {
+        if ($cart_line_item["item_id"] == $working_item_id
+            && $cart_line_item["customization"] == $working_customization) {
+                $matching_line_item_index = $cart_line_item_indx;
             }
     }
     return $matching_line_item_index;
+
+    // for ($counter = 0; $counter < count($_SESSION["cart"]); $counter++) {
+
+    //     if ($_SESSION["cart"][$counter]["item_id"] == $working_item_id
+    //         && $_SESSION["cart"][$counter]["customization"] == $working_customization) {
+    //             $matching_line_item_index = $counter;
+    //         }
+    // }
 }
+
 ?>

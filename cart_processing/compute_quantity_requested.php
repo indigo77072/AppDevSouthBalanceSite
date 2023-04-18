@@ -11,15 +11,23 @@ function count_preexisting_quantity_requested($correct_item_id) {
     }
 
     $count = 0;  // the count of preexisting quantity requested
-    $cart_index = 0;  // the cart line item #
-    for (; $cart_index < count($_SESSION["cart"]); $cart_index++) {
-
-        $cart_line_item = $_SESSION["cart"][$cart_index];
+    foreach ($_SESSION["cart"] as $cart_line_item) {
         if ($cart_line_item["item_id"] == $correct_item_id) {        
             $count += $cart_line_item["quantity"];
         }
     }
     return $count;
+
+    // $count = 0;  // the count of preexisting quantity requested
+    // $cart_index = 0;  // the cart line item #
+    // for (; $cart_index < count($_SESSION["cart"]); $cart_index++) {
+
+    //     $cart_line_item = $_SESSION["cart"][$cart_index];
+    //     if ($cart_line_item["item_id"] == $correct_item_id) {        
+    //         $count += $cart_line_item["quantity"];
+    //     }
+    // }
+    // return $count;
 }
 
 // return a total number requested of the item.
