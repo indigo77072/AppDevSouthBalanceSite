@@ -26,9 +26,13 @@ if(isset($_GET["msg2"])){
   <link rel="stylesheet" href="login_styles.css">
 </head>
 
+
 <body>
+  <div class="left-image"></div>
+  <div class="right-image"></div>
+  <h1>Sign In To The South Balance Online Store</h1>
   <div class="loginbox">
-    <h1>Login</h1>
+    <h2>Login</h2>
     <form method="POST" action="login_Process.php">
       <p>Username</p>
       <input type="text" name="username" placeholder="Enter Username" >
