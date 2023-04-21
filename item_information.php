@@ -87,12 +87,12 @@
                 <input type="radio" id="black" name="color_choice" value="Black">
                 <label for="black">Black</label> -->
 
-
-                Select a color:
+                <!-- noted 4/19 TODO: Add this feature in a later sprint -->
+                <!-- Select a color:
                 <select name="color_choice" id="color_choice">
                     <option value="blue">Blue</option>
                     <option value="green">Green</option>
-                </select>
+                </select> -->
 
 
 

@@ -2,15 +2,19 @@
 include("database.php");
 include 'header.php';
 if(!empty($_GET["action"])) {
+
 switch($_GET["action"]) {
 case "add":
 	if(!empty($_POST["quantity"])) {
+
 		$query = "SELECT * FROM inventory_items WHERE Item_ID='" . $_GET["Item_ID"] . "'";
         $result=mysqli_query($conn,$query);
         $row= mysqli_fetch_assoc($result);
+
 		$itemArray = array($row["Item_ID"]=>array('Item_Name'=>$row['Item_Name'], 'Item_ID'=>$row["Item_ID"], 'Item_Unit_Price'=>$row["Item_Unit_Price"], 'quantity'=>$_POST["quantity"], 'Image'=>$row['Image']));
 		//echo $row['Item_Unit_Price'];
 		if(!empty($_SESSION["cart_item"])){
+
 			if(in_array($row["Item_ID"],array_keys($_SESSION["cart_item"]))) {
 				foreach($_SESSION["cart_item"] as $k => $v) {
 						if($row["Item_ID"] == $k) {
