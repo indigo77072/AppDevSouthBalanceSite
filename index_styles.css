@@ -82,15 +82,6 @@ footer {
 	background-color: #fff;
 }
 
-.logo-image {
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	max-width: 300px;
-	height: auto;
-}
-
-
 #featuredItems {
   display: flex;
   flex-wrap: wrap;
