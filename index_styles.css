@@ -82,6 +82,40 @@ footer {
 	background-color: #fff;
 }
 
+div#socialMediaIcons {
+    margin-left: 20px;
+}
+
+div#socialMediaIcons > img {
+    margin: 0px 8px 25px 8px;
+}
+
+img#facebook {
+    width: 38px;
+    height: 38px;
+}
+
+img#twitter {
+    width: 38px;
+    height: 38px;
+}
+
+img#linkedin {
+    width: 38px;
+    height: 32px;
+}
+
+img#instagram {
+    width: 38px;
+    height: 38px;
+}
+
+img#youtube {
+    width: 38px;
+    height: 27px;
+}
+
+
 #featuredItems {
   display: flex;
   flex-wrap: wrap;
