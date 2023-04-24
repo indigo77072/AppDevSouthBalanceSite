@@ -16,48 +16,51 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
         <title>South Balance - Home</title>
 </head>
 <body>
+  <img src="Media/TulaneLogo.gif" alt="Tulane Logo Graphic" class="logo-image" />
+  <header>
+    <h1>South Balance </h1>
+  </header>
 
 <?php include 'header.php' ?>
 
-<div id="bodyText"><p>Radically Conscious. Obsessively Chill. Fanatically Zen.</p><br>
-<p class="bodyContent">Here at South Balance, we do “slowing down” differently. What started as a New Orleans-based mom-and-pop
-  retail operation has bloomed into one of the most popular and innovative suppliers of premium yoga mats
-  and merchandise in the United States and across the world. Recently named this year’s fastest growing company
-  by CIO magazine, we’re working hard to bring you the products and experience you expect and deserve. So go ahead; 
-  browse our site, explore our products, and picture yourself #fanaticallyzen.</p>
-</div>
-
-<div id="featuredItems">
-  <div class="row">
-    <div class="item">
-      <div class="itemImage">
-        <img id="test_wb" src="product_images/test_wb.png">
-      </div>
-      <button>Add to Cart</button>
-    </div>
-    <div class="item">
-      <div class="itemImage">
-        <img id="test_wb" src="product_images/test_wb.png">
-      </div>
-      <button>Add to Cart</button>
-    </div>
+<div id="bodyText">
+    <p>Radically Conscious. Obsessively Chill. Fanatically Zen.</p>
+    <br>
+    <p class="bodyContent">Here at South Balance, we do “slowing down” differently. What started as a New Orleans-based mom-and-pop retail operation has bloomed into one of the most popular and innovative suppliers of premium yoga mats and merchandise in the United States and across the world. Recently named this year’s fastest growing company by CIO magazine, we’re working hard to bring you the products and experience you expect and deserve. So go ahead; browse our site, explore our products, and picture yourself #fanaticallyzen.</p>
   </div>
-  <div class="row">
-    <div class="item">
-      <div class="itemImage">
-        <img id="test_wb" src="product_images/test_wb.png">
-      </div>
-      <button>Add to Cart</button>
-    </div>
-    <div class="item">
-      <div class="itemImage">
-        <img id="test_wb" src="product_images/test_wb.png">
-      </div>
-      <button>Add to Cart</button>
-    </div>
-  </div>
-</div>
 
+  <main>
+    <section id="featuredItems">
+      <div class="row">
+        <div class="item">
+          <div class="itemImage">
+            <img id="test_wb" src="product_images/test_wb.png">
+          </div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="item">
+          <div class="itemImage">
+            <img id="test_wb" src="product_images/test_wb.png">
+          </div>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="item">
+          <div class="itemImage">
+            <img id="test_wb" src="product_images/test_wb.png">
+          </div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="item">
+          <div class="itemImage">
+            <img id="test_wb" src="product_images/test_wb.png">
+          </div>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    </section>
+  </main>
 
     <footer>
         <p>© 2023 Copyright & Powered By 
