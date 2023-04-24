@@ -8,7 +8,7 @@
 /* set global styles */
 body {
 	background-color: #ccc;
-	color: #663399;
+	color: #006747;
 	font-family: 'Times New Roman', Times, serif;
 	font-size: 1em;
 	line-height: 1.5;
@@ -34,13 +34,13 @@ nav li {
 }
 
 nav a {
-	color: #663399;
+	color: #006747;
 	text-decoration: none;
 }
 
 nav a:hover {
 	color: #fff;
-	background-color: #663399;
+	background-color: #006747;
 	padding: 10px;
 	border-radius: 5px;
 }
@@ -73,7 +73,7 @@ ul a {
 
 ul a:hover {
 	color: #fff;
-	background-color: #663399;
+	background-color: #006747;
 	padding: 5px;
 	border-radius: 5px;
 }
