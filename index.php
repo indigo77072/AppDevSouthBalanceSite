@@ -70,6 +70,14 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
 		</section>
 	</main>
 	<footer>
+		<p>South Balance Social Media</p>
+            <div id="socialMediaIcons">
+                <img id="facebook" src="graphics/facebook.webp">
+                <img id="twitter" src="graphics/twitter.png">
+                <img id="instagram" src="graphics/instagram.webp">
+                <img id="linkedin" src="graphics/linkedin.webp">
+                <img id="youtube" src="graphics/youtube.png">
+            </div>
     <p>© 2023 Copyright & Powered By 
       Tulane School of Professional Development
     </p>
