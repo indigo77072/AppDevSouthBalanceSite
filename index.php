@@ -19,7 +19,6 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
 
 <?php include 'header.php' ?>
 
-<img src="Media/TulaneLogo.gif" alt="Tulane Logo Graphic" class="logo-image" />
 	<header>
 		<h1>South Balance Online Store</h1>
 	</header>
