@@ -10,20 +10,21 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
 <html>
 
 <head>
-        <meta charset="UTF-8"></meta>
-        <link rel="stylesheet" href="header_styles.css">
-        <link rel="stylesheet" href="index_styles.css">
-        <title>South Balance - Home</title>
+  <meta charset="UTF-8">
+  <title>South Balance - Home</title>
+  <link rel="stylesheet" href="header_styles.css">
+  <link rel="stylesheet" href="index_styles.css">
 </head>
+
 <body>
   <img src="Media/TulaneLogo.gif" alt="Tulane Logo Graphic" class="logo-image" />
   <header>
     <h1>South Balance </h1>
   </header>
 
-<?php include 'header.php' ?>
+  <?php include 'header.php' ?>
 
-<div id="bodyText">
+  <div id="bodyText">
     <p>Radically Conscious. Obsessively Chill. Fanatically Zen.</p>
     <br>
     <p class="bodyContent">Here at South Balance, we do “slowing down” differently. What started as a New Orleans-based mom-and-pop retail operation has bloomed into one of the most popular and innovative suppliers of premium yoga mats and merchandise in the United States and across the world. Recently named this year’s fastest growing company by CIO magazine, we’re working hard to bring you the products and experience you expect and deserve. So go ahead; browse our site, explore our products, and picture yourself #fanaticallyzen.</p>
@@ -62,11 +63,10 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
     </section>
   </main>
 
-    <footer>
-        <p>© 2023 Copyright & Powered By 
-          Tulane School of Professional Development
-        </p>
-    </footer>
+  <footer>
+    <p>© 2023 Copyright & Powered...
+    </p>
+  </footer>
 
 <!--
 // // Check connection
