@@ -3,11 +3,18 @@ include("database.php");
 include 'header.php';
 if(!empty($_GET["action"])) {
 
+	$working_item_id = $_GET["Item_ID"];
+	echo "working_item_id: " . $working_item_id;
+	echo "<br><br>";
+
 switch($_GET["action"]) {
 case "add":
+
+	echo "in add section";
+
 	if(!empty($_POST["quantity"])) {
 
-		$query = "SELECT * FROM inventory_items WHERE Item_ID='" . $_GET["Item_ID"] . "'";
+		$query = "SELECT * FROM inventory_items WHERE Item_ID='" . $working_item_id . "'";
         $result=mysqli_query($conn,$query);
         $row= mysqli_fetch_assoc($result);
 
@@ -31,7 +38,27 @@ case "add":
 			$_SESSION["cart_item"] = $itemArray;
         }
     }
-    break;    
+    break; 
+	case "remove":
+
+		echo "in remove code section";
+		echo "<br><br>";
+
+		// code the delete code here
+		foreach ($_SESSION["cart_item"] as $key => $cart_line_item) {
+			echo "detials for variable cart_line_item:";
+			echo "<br>";
+			echo "<br>";
+			print_r($cart_line_item);
+			echo "<br>";
+			echo "<br>";
+			if ($cart_line_item[$key]["Item_ID"] == $working_item_id) {
+				echo "working_item_id:";
+				echo $working_item_id;
+				unset($cart_line_item);
+			}
+		}
+		break;   
 }
 }
 ?>

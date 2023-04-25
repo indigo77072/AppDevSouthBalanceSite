@@ -42,10 +42,11 @@
             </div><div id="lowerSection"><div id="lowerLeftSection">
 
                 <!-- select military branch & radio options TODO: include none option -->
-            <form action="cart_processing/add_to_cart_process.php" method="post">
+            <form action="cart2.php?action=add&Item_ID=<?php echo $_GET['item_id'];?>" method="post">
 
+            <!--- NOTE: THe following line might be necessaryu for passing hte item id to the new cart. --->
                 <!-- the following is a hiden field, necessary to pass the item_id to the add_to_cart_process.php -->
-                <input type="hidden" name="item_id" id="item_id" value="<?php echo $_GET['item_id'];?>" />
+                <!-- <input type="hidden" name="Item_ID" id="Item_ID" value="<php echo $_GET['item_id'];?>" /> -->
 
                 <div id="customization">
                     Select Customization<br><br>

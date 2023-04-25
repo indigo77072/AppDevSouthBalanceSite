@@ -88,3 +88,12 @@ p#navigation {
     padding-right: 40px;
     margin-bottom: 0px;
 }
+
+a {
+    font-size: 1.2em;
+    color: #0099FF;
+}
+
+a:hover {
+    color: blue;
+}
