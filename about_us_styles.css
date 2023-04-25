@@ -38,17 +38,15 @@ section#theCompany p {
 /* Footer Styles */
 
 footer {
-    background-color: #ccc;
-    padding: 20px;
-    text-align: center;
+	background-color: #ccc;
 }
 
 div#socialMediaIcons {
-    margin: 20px 0;
+    margin-left: 20px;
 }
 
 div#socialMediaIcons > img {
-    margin: 0px 8px;
+    margin: 0px 8px 25px 8px;
 }
 
 img#facebook {
