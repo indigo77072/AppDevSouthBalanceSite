@@ -1,3 +1,6 @@
+php new 
+
+
 <?php
 include("database.php");
 if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
@@ -20,11 +23,11 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
 <?php include 'header.php' ?>
 
 	<header>
-		<h1>South Balance Online Store</h1>
+		<h1>Welcome! Let's make our customers feel valued and appreciated! </h1>
 	</header>
 	<main>
 		<section id="about">
-            <h2>About South Balance</h2>
+            <h2>South Balance:</h2>
             <p class="bodyContent">Here at South Balance, we do “slowing down” differently. What started as a
                New Orleans-based mom-and-pop retail operation has bloomed into one of the most popular and innovative
                 suppliers of premium yoga mats and merchandise in the United States and across the world. Recently named this 
@@ -32,7 +35,7 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
               and experience you expect and deserve. So go ahead; browse our site, explore our products, and picture yourself #fanaticallyzen.</p>
         </section>
 		<section id="featuredItems ">
-			<h2>Featured Items</h2>
+			<h2>Featured Items:</h2>
 			<div class="row">
         <div class="item">
           <div class="itemImage">
@@ -63,9 +66,16 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
       </div>
     </div>
 		</section>
-		<section id="companyPics">
-			<h2>The Company</h2>
-			
+		<section id="theCompany">
+			<h2>The Company:</h2>
+            <img src="graphics/sb_emp.png" alt="South Balance Employees" style="float:right;margin-left:10px;width:150px;height:100px;">
+            <p class="bodyContent">At South Balance Inc., we never stop innovating. It takes hundreds of 
+                passionate, dedicated, and talented employees around the world to deliver the merchandise and 
+                shopping experience our customers expect and deserve. South Balance was able to successfully expand 
+                to Europe five years ago, as they continue to grow that line of business an opportunity arose where one 
+                of the company’s executives who is ex-military (USAF) with ties to the Army & Air Force Exchange Service 
+                (AAFES, also referred to as The Exchange and The PX or the BX) is the retailer in U.S. Army and Air Force 
+                installations worldwide.</p>
 		</section>
 	</main>
 	<footer>
@@ -77,7 +87,7 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
                 <img id="linkedin" src="graphics/linkedin.webp">
                 <img id="youtube" src="graphics/youtube.png">
             </div>
-    <p>© 2023 Copyright & Powered By 
+    <p>© 2023 Copyright & Powered By Tulane Tech -
       Tulane School of Professional Development
     </p>
 </footer>
