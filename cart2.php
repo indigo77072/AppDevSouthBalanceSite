@@ -3,6 +3,7 @@ include("database.php");
 include 'header.php';
 if(!empty($_GET["action"])) {
 
+	// NOTE: if we are deleting one line item, we don't want to delete all line items with the same id.
 	$working_item_id = $_GET["Item_ID"];
 	echo "working_item_id: " . $working_item_id;
 	echo "<br><br>";
@@ -45,19 +46,30 @@ case "add":
 		echo "<br><br>";
 
 		// code the delete code here
-		foreach ($_SESSION["cart_item"] as $key => $cart_line_item) {
-			echo "detials for variable cart_line_item:";
+		// NOTE - I'm testing iterating through the entire Session to  see if I was referring toi content within the cart item rather than accessing just the cart item.
+		foreach ($_SESSION as $cart_line_item_key => $cart_line_item_val) {
+			echo "detials for variable cart_line_item_val:";
 			echo "<br>";
 			echo "<br>";
-			print_r($cart_line_item);
+			print_r($cart_line_item_val);
 			echo "<br>";
 			echo "<br>";
-			if ($cart_line_item[$key]["Item_ID"] == $working_item_id) {
+
+			if ($_SESSION[$cart_line_item_key]["Item_ID"] == $working_item_id) {
+
+			// if ($cart_line_item["Item_ID"] == $working_item_id) {
 				echo "working_item_id:";
 				echo $working_item_id;
-				unset($cart_line_item);
+				echo "<br>";
+				echo "<br>";
+				// $_SESSION[$cart_line_item] = null;
+				unset($_SESSION[$cart_line_item_key]);
 			}
 		}
+
+		// re-build the cart-item variable
+		// TODO: try this next
+
 		break;   
 }
 }
@@ -73,6 +85,10 @@ case "add":
 
 <a id="btnEmpty" href="index.php?action=empty">Empty Cart</a>
 <?php
+
+// THEORY: the next line is evaluating to false, thereby skipping the construction of hte table w/ new cart info.
+
+// THEORY: since the cart items are stored directly in $_SESSION, it is difficult to refer to them.
 if(isset($_SESSION["cart_item"])){
     $total_quantity = 0;
     $total_price = 0;
