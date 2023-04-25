@@ -12,18 +12,23 @@ header {
     height: 70px;
     background-color: #ccc;
     color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
 
 header h1 {
     margin-left: 20px;
-    line-height: 70px;
+    line-height: 50px;
 }
 
-header ul {
-    float: right;
+header nav ul {
+    display: flex;
+    list-style: none;
     margin: 0;
     margin-right: 20px;
-    line-height: 70px;
+    line-height: 50px;
 }
 
 header li {
@@ -55,32 +60,36 @@ section#about {
     margin-top: 70px;
     padding: 50px;
     background-color: #F9F9F9;
+    text-align: center;
 }
 
 section#theCompany img {
-    float: right;
-    margin-left: 10px;
-    width: 150px;
-    height: 100px;
+    margin: 0 auto;
+    display: block;
+    width: 75%;
+    height: auto;
+    max-width: 600px;
 }
 
 section#theCompany p {
-    margin: 0;
+    margin: 30px auto 0 auto;
+    max-width: 800px;
 }
 
 /* Footer Styles */
 
-
 footer {
-	background-color: #ccc;
+    background-color: #ccc;
+    padding: 20px;
+    text-align: center;
 }
 
 div#socialMediaIcons {
-    margin-left: 20px;
+    margin: 20px 0;
 }
 
 div#socialMediaIcons > img {
-    margin: 0px 8px 25px 8px;
+    margin: 0px 8px;
 }
 
 img#facebook {
