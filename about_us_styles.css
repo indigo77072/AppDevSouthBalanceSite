@@ -6,17 +6,6 @@
     Filename: about_us_styles.css
 */
 
-/* Header Styles */
-
-header {
-    height: 70px;
-    background-color: #ccc;
-    color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
 
 /* Body Styles */
 
