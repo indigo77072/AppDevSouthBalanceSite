@@ -68,7 +68,7 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
 		</section>
 		<section id="theCompany">
 			<h2>The Company:</h2>
-            <img src="graphics/sb_emp.png" alt="South Balance Employees" style="float:right;margin-left:10px;width:150px;height:100px;">
+            <img src="graphics/sb_emp.png" alt="South Balance Employees" style="float:right;margin-left:10px;width:450px;height:300px;">
             <p class="bodyContent">At South Balance Inc., we never stop innovating. It takes hundreds of 
                 passionate, dedicated, and talented employees around the world to deliver the merchandise and 
                 shopping experience our customers expect and deserve. South Balance was able to successfully expand 
