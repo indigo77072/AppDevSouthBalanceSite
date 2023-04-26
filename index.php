@@ -1,6 +1,3 @@
-php new 
-
-
 <?php
 include("database.php");
 if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
@@ -65,18 +62,6 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
         </div>
       </div>
     </div>
-		</section>
-		<section id="theCompany">
-			<h2>The Company:</h2>
-            <img src="graphics/sb_emp.png" alt="South Balance Employees" style="float:right;margin-left:10px;width:450px;height:300px;">
-            <p class="bodyContent">At South Balance Inc., we never stop innovating. It takes hundreds of 
-                passionate, dedicated, and talented employees around the world to deliver the merchandise and 
-                shopping experience our customers expect and deserve. South Balance was able to successfully expand 
-                to Europe five years ago, as they continue to grow that line of business an opportunity arose where one 
-                of the company’s executives who is ex-military (USAF) with ties to the Army & Air Force Exchange Service 
-                (AAFES, also referred to as The Exchange and The PX or the BX) is the retailer in U.S. Army and Air Force 
-                installations worldwide.</p>
-		</section>
 	</main>
 	<footer>
 		<p>South Balance Social Media</p>
