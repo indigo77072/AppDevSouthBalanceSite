@@ -61,10 +61,11 @@ if(isset($_SESSION["cart_item"])){
 		?>
 				<tr>
 				<td><img src="<?php echo $item['Image'] ?>" class="img-box" alt="..." style="width:150px; height:150px"><?php echo $item["Item_Name"]; ?></td>
+				<td><?php echo $item["Item_ID"]; ?></td>
 				<td style="text-align:right;"><?php echo $item["quantity"]; ?></td>
 				<td  style="text-align:right;"><?php echo "$ ".$item['Item_Unit_Price']; ?></td>
 				<td  style="text-align:right;"><?php echo "$ ". number_format($item_price,2); ?></td>
-				<td style="text-align:center;"><a href="cart2.php?action=remove&Item_ID=<?php echo $item["Item_ID"]; ?>" class="btnRemoveAction"><img src="x.png" alt="Remove Item" /></a></td>
+				<td style="text-align:center;"><a href="cart2.php?action=remove&Item_ID=<?php echo $item["Item_ID"]; ?>" class="btnRemoveAction"><img src="" alt="Remove Item" /></a></td>
 				</tr>
 				<?php
 				$total_quantity += $item["quantity"];

@@ -27,7 +27,7 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
   browse our site, explore our products, and picture yourself #fanaticallyzen.</p>
 </div>
 
-<div id="featuredItems">
+<!-- <div id="featuredItems">
   <div class="row">
     <div class="item">
       <div class="itemImage">
@@ -56,7 +56,42 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
       <button>Add to Cart</button>
     </div>
   </div>
-</div>
+</div> -->
+<div class="container">
+    <div class="row">
+		
+   <?php 
+      $query="SELECT * from inventory_items WHERE featured ='Yes' " ;
+      $result=mysqli_query($conn,$query);
+  while($row= mysqli_fetch_assoc($result)){
+      ?>
+	  <form action="cart2.php?action=add&Item_ID=<?php echo $row['Item_ID'];?>" method="post">
+      <div class="col-md-3">
+        <div class="card" style="">
+         <img src="<?php echo $row['Image'] ?>" class="img-box" alt="..." style="width:150px; height:150px">
+         <div class="card-body">
+            <h5 class="card-title"><?php
+						echo $row['Item_Name'];
+						?></h5>
+              <p class="card-text">
+              <?php
+						echo $row['Item_Unit_Price']; 
+                        echo "<br>";
+                        echo $row['Item_Color'];
+                        echo "<br>";
+                        echo $row['Item_Size'];
+						?>
+              </p>
+		 <div class="cart-action"><input type="text" class="product-quantity" name="quantity" value="1" size="2" /><input type="submit" value="Add to Cart" class="bt btn-primary" /></div>
+  </div>
+	</form>
+	&nbsp;
+  </div>
+  </div>
+	<?php
+}
+    ?>
+    </div>
 
 
     <footer>

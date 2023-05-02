@@ -6,8 +6,8 @@
             </div><div id="rightSection">
                 <p id="navigation"><a href="index.php">Home</a> | 
                 <a href="about_us.php">About us</a> | 
-                <a href="catalog.php">Catalog</a> |
-                <a href="cart.php">Cart</a> | 
+                <a href="Catalog2.php">Catalog</a> |
+                <a href="cart2.php">Cart</a> | 
                 <a href="index.php">Support</a> |
                 <a href="logout.php">Logout</a></p>
             </div>
