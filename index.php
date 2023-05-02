@@ -33,13 +33,20 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
       <div class="itemImage">
         <img id="test_wb" src="product_images/test_wb.png">
       </div>
-      <button>Add to Cart</button>
-    </div>
-    <div class="item">
-      <div class="itemImage">
-        <img id="test_wb" src="product_images/test_wb.png">
+      <div class="row">
+        <div class="item">
+          <div class="itemImage">
+            <img id="test_wb" src="product_images/test_wb.png">
+          </div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="item">
+          <div class="itemImage">
+            <img id="test_wb" src="product_images/test_wb.png">
+          </div>
+          <button>Add to Cart</button>
+        </div>
       </div>
-      <button>Add to Cart</button>
     </div>
   </div>
   <div class="row">
@@ -99,6 +106,20 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
           Tulane School of Professional Development
         </p>
     </footer>
+	</main>
+	<footer>
+		<p>South Balance Social Media</p>
+            <div id="socialMediaIcons">
+                <img id="facebook" src="graphics/facebook.webp">
+                <img id="twitter" src="graphics/twitter.png">
+                <img id="instagram" src="graphics/instagram.webp">
+                <img id="linkedin" src="graphics/linkedin.webp">
+                <img id="youtube" src="graphics/youtube.png">
+            </div>
+    <p>© 2023 Copyright & Powered By Tulane Tech -
+      Tulane School of Professional Development
+    </p>
+</footer>
 
 <!--
 // // Check connection

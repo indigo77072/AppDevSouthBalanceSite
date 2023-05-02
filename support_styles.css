@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+/*
+    CSS Styles for support.php
+    Author: Will
+    Filename: support_styles.css
+*/
+
+
+
+/* Other Body Styles */
+
+p#supportText {
+    margin-top: 70px;
+    text-align: center;
+    
+}

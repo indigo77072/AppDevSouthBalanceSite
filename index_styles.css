@@ -1,29 +1,120 @@
-@charset "utf-8";
-
-/*
-    CSS Styles for index.php
-    Author: Will & Hector
-    Filename: index_styles.css
-*/
-
-div#searchBar {
-    margin-top: 20px;
-    text-align: center;
+/* reset default styles */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-input#search {
-    width: 320px;
+/* set global styles */
+body {
+	background-color: #fff;
+	color: #006747;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 1em;
+	line-height: 1.5;
 }
 
-div#bodyText {
-    margin: 40px auto auto auto;
-    width: 40%;
+header {
+	background-color: #ccc;
+	padding: 20px;
 }
 
-p {
-    margin: auto;
-    text-align: left;
+h1 {
+	font-size: 2.5em;
+	margin-bottom: 20px;
 }
+
+nav ul {
+	list-style: none;
+}
+
+nav li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+nav a {
+	color: #006747;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #fff;
+	background-color: #006747;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+main {
+	padding: 20px;
+}
+
+section {
+	margin-bottom: 40px;
+}
+
+section h2 {
+	font-size: 2em;
+	margin-bottom: 20px;
+}
+
+ul {
+	list-style: none;
+}
+
+ul li {
+	margin-bottom: 10px;
+}
+
+ul a {
+	color: #663399;
+	text-decoration: none;
+}
+
+ul a:hover {
+	color: #fff;
+	background-color: #006747;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+footer {
+	background-color: #ccc;
+}
+
+div#socialMediaIcons {
+    margin-left: 20px;
+}
+
+div#socialMediaIcons > img {
+    margin: 0px 8px 25px 8px;
+}
+
+img#facebook {
+    width: 38px;
+    height: 38px;
+}
+
+img#twitter {
+    width: 38px;
+    height: 38px;
+}
+
+img#linkedin {
+    width: 38px;
+    height: 32px;
+}
+
+img#instagram {
+    width: 38px;
+    height: 38px;
+}
+
+img#youtube {
+    width: 38px;
+    height: 27px;
+}
+
 
 #featuredItems {
   display: flex;
@@ -61,7 +152,7 @@ p {
 .itemImage img {
   max-height: 100%;
 }
-
+ 
 button {
   background-color: black;
   color: white;

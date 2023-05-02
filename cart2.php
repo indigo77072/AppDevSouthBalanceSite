@@ -2,15 +2,27 @@
 include("database.php");
 include 'header.php';
 if(!empty($_GET["action"])) {
+
+	// NOTE: if we are deleting one line item, we don't want to delete all line items with the same id.
+	$working_item_id = $_GET["Item_ID"];
+	echo "working_item_id: " . $working_item_id;
+	echo "<br><br>";
+
 switch($_GET["action"]) {
 case "add":
+
+	echo "in add section";
+
 	if(!empty($_POST["quantity"])) {
-		$query = "SELECT * FROM inventory_items WHERE Item_ID='" . $_GET["Item_ID"] . "'";
+
+		$query = "SELECT * FROM inventory_items WHERE Item_ID='" . $working_item_id . "'";
         $result=mysqli_query($conn,$query);
         $row= mysqli_fetch_assoc($result);
+
 		$itemArray = array($row["Item_ID"]=>array('Item_Name'=>$row['Item_Name'], 'Item_ID'=>$row["Item_ID"], 'Item_Unit_Price'=>$row["Item_Unit_Price"], 'quantity'=>$_POST["quantity"], 'Image'=>$row['Image']));
 		//echo $row['Item_Unit_Price'];
 		if(!empty($_SESSION["cart_item"])){
+
 			if(in_array($row["Item_ID"],array_keys($_SESSION["cart_item"]))) {
 				foreach($_SESSION["cart_item"] as $k => $v) {
 						if($row["Item_ID"] == $k) {
@@ -27,7 +39,38 @@ case "add":
 			$_SESSION["cart_item"] = $itemArray;
         }
     }
-    break;    
+    break; 
+	case "remove":
+
+		echo "in remove code section";
+		echo "<br><br>";
+
+		// code the delete code here
+		// NOTE - I'm testing iterating through the entire Session to  see if I was referring toi content within the cart item rather than accessing just the cart item.
+		foreach ($_SESSION as $cart_line_item_key => $cart_line_item_val) {
+			echo "detials for variable cart_line_item_val:";
+			echo "<br>";
+			echo "<br>";
+			print_r($cart_line_item_val);
+			echo "<br>";
+			echo "<br>";
+
+			if ($_SESSION[$cart_line_item_key]["Item_ID"] == $working_item_id) {
+
+			// if ($cart_line_item["Item_ID"] == $working_item_id) {
+				echo "working_item_id:";
+				echo $working_item_id;
+				echo "<br>";
+				echo "<br>";
+				// $_SESSION[$cart_line_item] = null;
+				unset($_SESSION[$cart_line_item_key]);
+			}
+		}
+
+		// re-build the cart-item variable
+		// TODO: try this next
+
+		break;   
 }
 }
 ?>
@@ -42,6 +85,10 @@ case "add":
 
 <a id="btnEmpty" href="index.php?action=empty">Empty Cart</a>
 <?php
+
+// THEORY: the next line is evaluating to false, thereby skipping the construction of hte table w/ new cart info.
+
+// THEORY: since the cart items are stored directly in $_SESSION, it is difficult to refer to them.
 if(isset($_SESSION["cart_item"])){
     $total_quantity = 0;
     $total_price = 0;
