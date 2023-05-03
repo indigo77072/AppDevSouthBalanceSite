@@ -5,18 +5,7 @@
 -->
 <?php
 include("database.php");
-$wrong_login = "";
-if(isset($_GET["msg"])){
-	$wrong_login=$_GET["msg"];
-  echo $wrong_login;
-  $wrong_login="";
-}
-$must_login = "";
-if(isset($_GET["msg2"])){
-	$must_login=$_GET["msg2"];
-  echo $must_login;
-  $must_login="";
-}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,6 +20,20 @@ if(isset($_GET["msg2"])){
   <div class="left-image"></div>
   <h1>Sign In To The South Balance Online Store</h1>
   <div class="loginbox">
+    <?php
+    $wrong_login = "";
+    if(isset($_GET["msg"])){
+      $wrong_login=$_GET["msg"];
+      echo $wrong_login;
+      $wrong_login="";
+    }
+    $must_login = "";
+    if(isset($_GET["msg2"])){
+      $must_login=$_GET["msg2"];
+      echo $must_login;
+      $must_login="";
+    }
+    ?>
     <h2>Login</h2>
     <form method="POST" action="login_Process.php">
       <p>Username</p>

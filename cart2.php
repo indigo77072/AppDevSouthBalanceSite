@@ -5,13 +5,13 @@ if(!empty($_GET["action"])) {
 
 	// NOTE: if we are deleting one line item, we don't want to delete all line items with the same id.
 	$working_item_id = $_GET["Item_ID"];
-	echo "working_item_id: " . $working_item_id;
-	echo "<br><br>";
+	/*echo "working_item_id: " . $working_item_id;
+	echo "<br><br>";*/
 
 switch($_GET["action"]) {
 case "add":
 
-	echo "in add section";
+	//echo "in add section";
 
 	if(!empty($_POST["quantity"])) {
 
@@ -83,7 +83,7 @@ case "add":
 <BODY>
 <div id="shopping-cart">
 
-<a id="btnEmpty" href="index.php?action=empty">Empty Cart</a>
+<!--<a id="btnEmpty" href="index.php?action=empty">Empty Cart</a>-->
 <?php
 
 // THEORY: the next line is evaluating to false, thereby skipping the construction of hte table w/ new cart info.
@@ -93,14 +93,14 @@ if(isset($_SESSION["cart_item"])){
     $total_quantity = 0;
     $total_price = 0;
 ?>	
+<form action ="compOrder.php?submit='Yes'" method="GET">
 <table class="tbl-cart" cellpadding="10" cellspacing="1">
 <tbody>
 <tr>
 <th style="text-align:left;">Name</th>
 <th style="text-align:right;" width="5%">Quantity</th>
 <th style="text-align:right;" width="10%">Unit Price</th>
-<th style="text-align:right;" width="10%">Price</th>
-<th style="text-align:center;" width="5%">Remove</th>
+<th style="text-align:right;" width="10%">Total Price</th>
 </tr>	
 <?php		
     foreach ($_SESSION["cart_item"] as $item){
@@ -108,11 +108,10 @@ if(isset($_SESSION["cart_item"])){
 		?>
 				<tr>
 				<td><img src="<?php echo $item['Image'] ?>" class="img-box" alt="..." style="width:150px; height:150px"><?php echo $item["Item_Name"]; ?></td>
-				<td><?php echo $item["Item_ID"]; ?></td>
-				<td style="text-align:right;"><?php echo $item["quantity"]; ?></td>
+				<td style="text-align:right;"><?php echo $item["quantity"]; $quantity = $item['quantity']?></td>
 				<td  style="text-align:right;"><?php echo "$ ".$item['Item_Unit_Price']; ?></td>
 				<td  style="text-align:right;"><?php echo "$ ". number_format($item_price,2); ?></td>
-				<td style="text-align:center;"><a href="cart2.php?action=remove&Item_ID=<?php echo $item["Item_ID"]; ?>" class="btnRemoveAction"><img src="" alt="Remove Item" /></a></td>
+				<!-- <td style="text-align:center;"><a href="cart2.php?action=remove&Item_ID=<?php //echo $item["Item_ID"]; ?>" class="btnRemoveAction"><img src="" alt="Remove Item" /></a></td> -->
 				</tr>
 				<?php
 				$total_quantity += $item["quantity"];
@@ -121,13 +120,38 @@ if(isset($_SESSION["cart_item"])){
 		?>
 
 <tr>
-<td colspan="2" align="right">Total:</td>
-<td align="right"><?php echo $total_quantity; ?></td>
+<td align="right" colspan="2"><?php echo $total_quantity; ?></td>
 <td align="right" colspan="2"><strong><?php echo "$ ".number_format($total_price, 2); ?></strong></td>
 <td></td>
 </tr>
+<tr>
+	<td align="right" colspan="2">
+		<select name="Location">
+			<?php 
+			$sql2 = mysqli_query($conn, "SELECT * FROM distribustion_centers");
+			while ($rowD = $sql2->fetch_assoc()){
+			echo "<option value=" . $rowD['Center_ID']. ">" . $rowD['Facility_Name'] . "</option>";
+			}
+			?>
+			
+		</select>
+	</td>
+</tr>
+<tr>
+	
+	<input type="hidden" name="totQuantity" value="<?php echo $total_quantity; ?>">
+		<input type="hidden" name="totPrice" value="<?php echo $total_price; ?>">
+	<td align="right" colspan="2"> <input type="submit" name="comOrder" value="Complte Order"></td>
+</tr>
+<tr>
+	<td>
+	
+
+	</td>
+</tr>
 </tbody>
-</table>		
+</table>	
+</form>	
   <?php
 } else {
 ?>

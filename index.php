@@ -19,8 +19,8 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
 
 <?php include 'header.php' ?>
 
-<div id="bodyText"><p>Radically Conscious. Obsessively Chill. Fanatically Zen.</p><br>
-<p class="bodyContent">Here at South Balance, we do “slowing down” differently. What started as a New Orleans-based mom-and-pop
+<div id="bodyText" style="text-align:center; font-size:40px"><p>Radically Conscious. Obsessively Chill. Fanatically Zen.</p><br>
+<p class="bodyContent" style="text-align:center; font-size:30px">Here at South Balance, we do “slowing down” differently. What started as a New Orleans-based mom-and-pop
   retail operation has bloomed into one of the most popular and innovative suppliers of premium yoga mats
   and merchandise in the United States and across the world. Recently named this year’s fastest growing company
   by CIO magazine, we’re working hard to bring you the products and experience you expect and deserve. So go ahead; 
@@ -64,6 +64,7 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
     </div>
   </div>
 </div> -->
+<!--
 <div class="container">
     <div class="row">
 		
@@ -98,7 +99,7 @@ if(!isset($_SESSION['id'])|| empty($_SESSION['id'])){
 	<?php
 }
     ?>
-    </div>
+    </div> -->
 
 
     <footer>
